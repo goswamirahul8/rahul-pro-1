@@ -2904,24 +2904,121 @@ body {
       filter: drop-shadow(0 0 12px rgba(0, 82, 204, 0.85));
     }
 
-    @media (max-width: 992px) {
-      .split-slider-container {
-        grid-template-columns: 1fr;
-      }
-      .split-left-panel {
-        height: 380px;
-      }
-      .split-nav-thumbs {
-        top: 380px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        flex-direction: row;
-      }
-      .split-right-panel {
-        padding: 60px 8%;
-      }
-      .split-slider-section {
-        height: auto;
-      }
-    }
+/* ==========================================================================
+   MASTER FULLY RESPONSIVE MEDIA QUERIES (MOBILE, TABLET, LAPTOP, DESKTOP)
+   ========================================================================== */
+
+/* 1. LARGE DESKTOPS & WIDESCREEN (1400px+) */
+@media (min-width: 1400px) {
+  .sims-sec-title { font-size: 3.5rem; }
+  .bento-grid { gap: 28px; }
+}
+
+/* 2. LAPTOPS & SMALL DESKTOPS (993px - 1200px) */
+@media (max-width: 1200px) {
+  .sims-hero-headline-bottom { font-size: 4rem; }
+  .bento-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .sims-cards-grid, .sims-metrics-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-main-grid { grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr; gap: 30px; }
+}
+
+/* 3. TABLETS & SMALL LAPTOPS (769px - 992px) */
+@media (max-width: 992px) {
+  .sims-header-container { top: 16px; padding: 0 4%; }
+  .sims-navbar { padding: 10px 20px; }
+  .sims-logo-svg { height: 32px; }
+  
+  .sims-hero { min-height: 85vh; padding: 0 6% 60px; }
+  .sims-hero-headline-bottom { font-size: 3.2rem; }
+  
+  .pixel-split-container { grid-template-columns: 1fr; gap: 40px; }
+  .pixel-split-title { font-size: 2.4rem; }
+  
+  .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .capabilities-section { padding: 70px 4%; }
+  
+  .split-slider-container { grid-template-columns: 1fr; }
+  .split-left-panel { height: 360px; }
+  .split-nav-thumbs { top: 360px; left: 50%; transform: translate(-50%, -50%); flex-direction: row; gap: 12px; }
+  .split-right-panel { padding: 60px 6% 50px; }
+  .split-slider-section { height: auto; margin-top: 50px; margin-bottom: 50px; }
+  .split-slide-title { font-size: 2.2rem; }
+  
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .achievements-section { padding: 70px 5%; margin-top: 50px; margin-bottom: 50px; }
+  
+  .sims-footer { padding: 60px 6% 30px; }
+  .footer-main-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 30px; }
+  .footer-watermark { font-size: 8vw; }
+}
+
+/* 4. MOBILE PHABLETS & LARGE PHONES (577px - 768px) */
+@media (max-width: 768px) {
+  .sims-header-container { top: 12px; padding: 0 3%; }
+  .sims-navbar { padding: 8px 16px; border-radius: 40px; }
+  .sims-logo-svg { height: 28px; }
+  .sims-lang-btn { display: none; }
+  .sims-pill-btn { padding: 8px 16px; font-size: 0.8rem; }
+  
+  .sims-drawer-overlay { padding: 30px 6%; }
+  .sims-drawer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .sims-drawer-menu-links a { font-size: 1.8rem; }
+  .sims-drawer-info { padding-left: 0; border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 20px; }
+  
+  .sims-hero { min-height: 80vh; padding: 0 5% 50px; }
+  .sims-hero-headline-bottom { font-size: 2.4rem; line-height: 1.15; }
+  
+  .pixel-split-sec { padding: 60px 5%; }
+  .pixel-split-title { font-size: 2rem; }
+  .pixel-split-text { font-size: 1rem; }
+  
+  .fleet-filter-bar { gap: 8px; margin-bottom: 30px; }
+  .filter-btn { padding: 8px 14px; font-size: 0.8rem; }
+  
+  .bento-grid { grid-template-columns: 1fr; gap: 16px; }
+  .bento-card { min-height: auto; padding: 24px 20px; }
+  .bento-title { font-size: 1.25rem; }
+  
+  .split-left-panel { height: 280px; }
+  .split-nav-thumbs { top: 280px; }
+  .split-thumb-dot { width: 36px; height: 36px; }
+  .split-slide-title { font-size: 1.8rem; }
+  .split-slide-desc { font-size: 0.95rem; }
+  .split-counter-badge { top: 20px; left: 6%; font-size: 0.85rem; }
+  
+  .achievements-grid { grid-template-columns: 1fr; gap: 24px; }
+  .radial-circle { width: 140px; height: 140px; }
+  .gauge-percentage { font-size: 2rem; }
+  
+  .footer-main-grid { grid-template-columns: 1fr; gap: 32px; }
+  .sims-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-watermark { font-size: 10vw; letter-spacing: 2px; }
+}
+
+/* 5. SMALL MOBILE PHONES (320px - 576px) */
+@media (max-width: 576px) {
+  .sims-navbar { padding: 6px 14px; }
+  .sims-logo-svg { height: 24px; }
+  .sims-pill-btn { display: none; }
+  
+  .sims-hero-headline-bottom { font-size: 1.95rem; }
+  .sims-sec-title { font-size: 1.85rem !important; }
+  .sims-sec-subtitle { font-size: 0.85rem !important; }
+  
+  .pixel-split-title { font-size: 1.7rem; }
+  
+  .filter-btn { padding: 6px 12px; font-size: 0.75rem; }
+  
+  .split-right-panel { padding: 45px 5% 35px; }
+  .split-slide-title { font-size: 1.5rem; }
+  .split-slide-btn { padding: 10px 24px; font-size: 0.8rem; }
+  
+  .radial-circle { width: 130px; height: 130px; }
+  .gauge-percentage { font-size: 1.8rem; }
+  .gauge-label { font-size: 0.75rem; }
+  .achievement-title { font-size: 1.1rem; }
+  
+  .footer-compliance-badges { gap: 8px; }
+  .compliance-pill { padding: 4px 10px; font-size: 0.75rem; }
+}
   
