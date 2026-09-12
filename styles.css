@@ -1554,13 +1554,13 @@ i, i:before, i:after,
       font-size: 1.15rem;
     }
 
-    /* OUR VALUED PARTNERS FIXED PARALLAX SHIPYARD BANNER */
+    /* OUR VALUED PARTNERS FIXED PARALLAX SHIP BANNER */
     .our-partners-sec {
       position: relative;
       width: 100%;
       padding: 100px 0 110px 0;
       background-color: #0052cc;
-      background-image: linear-gradient(180deg, rgba(0, 82, 204, 0.65) 0%, rgba(0, 51, 153, 0.75) 100%), url('assets/images/banner-vision-shipyard.jpg');
+      background-image: linear-gradient(180deg, rgba(0, 82, 204, 0.6) 0%, rgba(0, 51, 153, 0.7) 100%), url('assets/images/sharp_ship_hero.png');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
