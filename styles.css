@@ -19,32 +19,19 @@
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-sans);
-  background-color: var(--sims-bg-page);
-  color: var(--sims-navy-text);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* UNIFIED GLOBAL HEADING & TITLE TYPOGRAPHY */
+/* 100% STRICT UNIFIED SITE-WIDE FONT (MATCHING "OUR ANCHORS" / CORPORATE MODERN FONT) */
+html, body, *, *:before, *:after,
 h1, h2, h3, h4, h5, h6,
-.sims-sec-title,
-.pixel-split-title,
-.op3-card-title,
-.split-slide-title,
-.radial-sec-title,
-.milestones-header-title,
-.compliance-title,
-.capability-title,
-.footer-cta-text h3 {
-  font-family: var(--font-heading) !important;
+p, a, span, div, li, button, input, textarea,
+.sims-sec-title, .sims-sec-subtitle,
+.pixel-split-title, .pixel-split-text,
+.op3-card-title, .op3-card-desc,
+.split-slide-title, .split-slide-desc,
+.radial-sec-title, .milestones-header-title,
+.compliance-title, .capability-title,
+.footer-cta-text h3, .footer-watermark,
+.sims-hero-headline-bottom, .sims-metric-val, .sims-metric-label {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
 }
 
 /* ===================================================
