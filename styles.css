@@ -1582,14 +1582,14 @@ i, i:before, i:after,
 
     .partners-title-box {
       display: inline-block;
-      background: #0d59c5;
-      color: #ffffff;
-      font-size: 2.2rem;
+      background: transparent !important;
+      color: #ffffff !important;
+      font-size: 2.6rem;
       font-weight: 800;
-      padding: 10px 36px;
-      border-radius: 6px;
+      padding: 0;
+      border-radius: 0;
       letter-spacing: -0.5px;
-      box-shadow: 0 10px 30px rgba(13, 89, 197, 0.45);
+      box-shadow: none !important;
       text-transform: capitalize;
     }
 
