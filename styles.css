@@ -1534,24 +1534,7 @@ i, i:before, i:after,
     }
 
     .legacy-vessel-badge {
-      background: rgba(7, 25, 50, 0.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(0, 229, 255, 0.35);
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .legacy-vessel-badge i {
-      color: #00e5ff;
-      font-size: 1.15rem;
+      display: none !important;
     }
 
     /* OUR VALUED PARTNERS FIXED PARALLAX SHIP BANNER */
