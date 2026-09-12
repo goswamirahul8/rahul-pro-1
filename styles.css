@@ -2181,7 +2181,7 @@ i, i:before, i:after,
     .compliance-subtitle {
       font-size: 0.85rem;
       font-weight: 800;
-      color: #0284c7;
+      color: #0052cc;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 10px;
@@ -2195,10 +2195,10 @@ i, i:before, i:after,
     }
 
     .compliance-title span {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-style: italic;
-      font-weight: 600;
-      color: #0284c7;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 800;
+      color: #0052cc;
     }
 
     .compliance-cards-grid {
@@ -2222,20 +2222,20 @@ i, i:before, i:after,
 
     .compliance-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(2, 132, 199, 0.12);
-      border-color: #cbd5e1;
+      box-shadow: 0 15px 35px rgba(0, 82, 204, 0.15);
+      border-color: #0052cc;
     }
 
     .compliance-icon-wrap {
       width: 54px;
       height: 54px;
-      background: #f0f9ff;
+      background: rgba(0, 82, 204, 0.08);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 18px;
-      color: #0284c7;
+      color: #0052cc;
       font-size: 1.6rem;
       transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, color 0.3s ease;
       position: relative;
@@ -2793,7 +2793,8 @@ i, i:before, i:after,
       font-size: 0.85rem;
       font-weight: 800;
       letter-spacing: 2.5px;
-      color: #38bdf8;
+      color: #ffffff;
+      opacity: 0.9;
       text-transform: uppercase;
       margin-bottom: 14px;
     }
