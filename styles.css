@@ -2934,6 +2934,8 @@ body {
   .pixel-split-container { grid-template-columns: 1fr; gap: 40px; }
   .pixel-split-title { font-size: 2.4rem; }
   
+  .sims-metrics-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+  
   .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .capabilities-section { padding: 70px 4%; }
   
@@ -2954,11 +2956,12 @@ body {
 
 /* 4. MOBILE PHABLETS & LARGE PHONES (577px - 768px) */
 @media (max-width: 768px) {
-  .sims-header-container { top: 12px; padding: 0 3%; }
-  .sims-navbar { padding: 8px 16px; border-radius: 40px; }
-  .sims-logo-svg { height: 28px; }
-  .sims-lang-btn { display: none; }
-  .sims-pill-btn { padding: 8px 16px; font-size: 0.8rem; }
+  .sims-header-container { top: 10px !important; padding: 0 12px !important; }
+  .sims-navbar { padding: 8px 16px !important; border-radius: 35px !important; max-width: 100% !important; }
+  .sims-logo-svg { height: 28px !important; max-width: 150px !important; }
+  .sims-lang-btn { display: none !important; }
+  .sims-pill-btn { padding: 8px 16px !important; font-size: 0.8rem !important; }
+  .sims-menu-toggle { width: 38px !important; height: 38px !important; font-size: 1.15rem !important; }
   
   .sims-drawer-overlay { padding: 30px 6%; }
   .sims-drawer-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -2971,6 +2974,18 @@ body {
   .pixel-split-sec { padding: 60px 5%; }
   .pixel-split-title { font-size: 2rem; }
   .pixel-split-text { font-size: 1rem; }
+  
+  /* Metrics Grid on Mobile: 1 Column Full Width */
+  .sims-metrics-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
+  .sims-metric-card { width: 100% !important; padding: 28px 20px 22px !important; }
+  
+  /* Anchors Accordion on Mobile: Vertical Stack */
+  .option3-container { flex-direction: column !important; height: auto !important; gap: 18px !important; }
+  .op3-strip { width: 100% !important; height: auto !important; min-height: 240px !important; flex: none !important; }
+  .op3-strip.expanded { flex: none !important; height: auto !important; min-height: 300px !important; }
+  .op3-strip-img { position: absolute !important; inset: 0 !important; opacity: 0.25 !important; }
+  .op3-strip.expanded .op3-strip-img { opacity: 0.35 !important; }
+  .op3-content-full { position: relative !important; opacity: 1 !important; transform: none !important; padding: 24px 20px !important; background: transparent !important; }
   
   .fleet-filter-bar { gap: 8px; margin-bottom: 30px; }
   .filter-btn { padding: 8px 14px; font-size: 0.8rem; }
@@ -2997,9 +3012,11 @@ body {
 
 /* 5. SMALL MOBILE PHONES (320px - 576px) */
 @media (max-width: 576px) {
-  .sims-navbar { padding: 6px 14px; }
-  .sims-logo-svg { height: 24px; }
-  .sims-pill-btn { display: none; }
+  .sims-header-container { top: 8px !important; padding: 0 8px !important; }
+  .sims-navbar { padding: 6px 12px !important; }
+  .sims-logo-svg { height: 24px !important; max-width: 120px !important; }
+  .sims-pill-btn { display: none !important; }
+  .sims-menu-toggle { width: 34px !important; height: 34px !important; font-size: 1rem !important; }
   
   .sims-hero-headline-bottom { font-size: 1.95rem; }
   .sims-sec-title { font-size: 1.85rem !important; }
@@ -3008,6 +3025,9 @@ body {
   .pixel-split-title { font-size: 1.7rem; }
   
   .filter-btn { padding: 6px 12px; font-size: 0.75rem; }
+  
+  .sims-metric-val { font-size: 2.5rem !important; }
+  .sims-metric-label { font-size: 0.8rem !important; letter-spacing: 1px !important; }
   
   .split-right-panel { padding: 45px 5% 35px; }
   .split-slide-title { font-size: 1.5rem; }
