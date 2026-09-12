@@ -2751,15 +2751,7 @@ p, a, span, div, li, button, input, textarea,
 
     /* FRACTION COUNTER TOP RIGHT */
     .split-counter-badge {
-      position: absolute;
-      top: 50px;
-      left: 12%;
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-      color: #00e5ff;
-      opacity: 0.9;
+      display: none !important;
     }
 
     .split-text-slide {
