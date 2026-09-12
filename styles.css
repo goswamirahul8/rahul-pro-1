@@ -19,10 +19,14 @@
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 100% STRICT UNIFIED SITE-WIDE FONT (MATCHING "OUR ANCHORS" / CORPORATE MODERN FONT) */
-html, body, *, *:before, *:after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, p, a, span, div, li, button, input, textarea,
 h1, h2, h3, h4, h5, h6,
-p, a, span, div, li, button, input, textarea,
 .sims-sec-title, .sims-sec-subtitle,
 .pixel-split-title, .pixel-split-text,
 .op3-card-title, .op3-card-desc,
@@ -31,7 +35,17 @@ p, a, span, div, li, button, input, textarea,
 .compliance-title, .capability-title,
 .footer-cta-text h3, .footer-watermark,
 .sims-hero-headline-bottom, .sims-metric-val, .sims-metric-label {
-  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* STRICT REMIXICON FONT PRESERVATION (RESTORES ALL ARROWS, GLOBES & HAMBURGER ICONS) */
+i, i:before, i:after,
+[class^="ri-"], [class*=" ri-"],
+[class^="ri-"]:before, [class*=" ri-"]:before {
+  font-family: 'remixicon' !important;
+  font-style: normal !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===================================================
