@@ -1081,15 +1081,15 @@ i, i:before, i:after,
       }
     }
 
-    /* High-Tech Dashboard Dark Section (Matching Option 2 Screenshot 100%) */
+    /* High-Tech Dashboard Dark Section (Matching Pure Blue #0052cc & White Theme) */
     .sims-metrics-sec-dark {
-      background: #040d1a;
-      background-image: radial-gradient(rgba(0, 180, 216, 0.12) 1px, transparent 1px);
+      background: #0052cc !important;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px) !important;
       background-size: 24px 24px;
       color: #ffffff;
       padding: 100px 5%;
       position: relative;
-      border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .sims-metrics-container {
@@ -1114,7 +1114,8 @@ i, i:before, i:after,
     }
 
     .sims-sec-header-center .sims-sec-subtitle {
-      color: #00b4d8;
+      color: #ffffff;
+      opacity: 0.9;
       font-size: 1.1rem;
       font-weight: 500;
       letter-spacing: 0.5px;
@@ -1127,10 +1128,10 @@ i, i:before, i:after,
       margin-top: 50px;
     }
 
-    /* CARD STYLING WITH 3D PERSPECTIVE & CREATIVE NEON HOVER */
+    /* CARD STYLING WITH PURE BLUE #0052cc & WHITE ACCENTS */
     .sims-metric-card {
-      background: #0052cc !important;
-      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      border: 2px solid #ffffff !important;
       border-radius: 20px;
       padding: 36px 24px 28px;
       text-align: center;
@@ -1140,7 +1141,7 @@ i, i:before, i:after,
       position: relative;
       perspective: 1000px;
       transform-style: preserve-3d;
-      box-shadow: 0 10px 30px rgba(0, 82, 204, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
       overflow: hidden;
     }
@@ -1341,23 +1342,24 @@ i, i:before, i:after,
     }
 
     .radial-counter-card {
-      background: linear-gradient(145deg, #071932 0%, #06152a 100%);
-      border: 1px solid rgba(0, 229, 255, 0.2);
+      background: #0052cc !important;
+      border: 2px solid #0052cc !important;
       border-radius: 20px;
       padding: 38px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      box-shadow: 0 12px 30px rgba(6, 21, 42, 0.18);
+      color: #ffffff !important;
+      box-shadow: 0 12px 30px rgba(0, 82, 204, 0.3);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .radial-counter-card:hover {
       transform: translateY(-8px);
-      background: linear-gradient(145deg, #0b2244 0%, #071932 100%);
-      border-color: #00e5ff;
-      box-shadow: 0 20px 42px rgba(0, 229, 255, 0.28);
+      background: #0040a8 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 20px 42px rgba(0, 82, 204, 0.45);
     }
 
     .card-top-icon-circle {
@@ -1829,12 +1831,12 @@ i, i:before, i:after,
 
     /* HIGH-END UNIQUE INDUSTRIAL LUXURY FOOTER STYLES */
     .sims-footer {
-      background: #040d1a;
-      color: #94a3b8;
+      background: #0052cc !important;
+      color: #ffffff;
       position: relative;
       overflow: hidden;
       font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
       padding-top: 60px;
     }
 
@@ -1846,7 +1848,7 @@ i, i:before, i:after,
       transform: translateX(-50%);
       width: 1000px;
       height: 350px;
-      background: radial-gradient(circle, rgba(13, 89, 197, 0.14) 0%, rgba(4, 13, 26, 0) 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -1860,17 +1862,26 @@ i, i:before, i:after,
     }
 
     .footer-cta-card {
-      background: linear-gradient(135deg, rgba(11, 31, 58, 0.95) 0%, rgba(7, 22, 44, 0.95) 100%);
+      background: #ffffff !important;
+      color: #0f172a !important;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 2px solid #ffffff;
       border-radius: 16px;
       padding: 35px 50px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-cta-text h3 {
+      color: #0f172a !important;
+    }
+
+    .footer-cta-text p {
+      color: #475569 !important;
     }
 
     .footer-cta-text h3 {
@@ -1952,7 +1963,7 @@ i, i:before, i:after,
     .footer-col-brand p {
       font-size: 0.92rem;
       line-height: 1.6;
-      color: #94a3b8;
+      color: #e2e8f0;
       margin: 20px 0 25px 0;
       max-width: 340px;
     }
@@ -1969,9 +1980,9 @@ i, i:before, i:after,
       font-weight: 700;
       letter-spacing: 0.5px;
       padding: 5px 12px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #38bdf8;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
       border-radius: 20px;
     }
 
@@ -1985,8 +1996,8 @@ i, i:before, i:after,
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       color: #ffffff;
       display: flex;
       align-items: center;
@@ -1997,17 +2008,18 @@ i, i:before, i:after,
     }
 
     .footer-social-icon:hover {
-      background: #0d59c5;
-      border-color: #0d59c5;
+      background: #ffffff;
+      color: #0052cc;
+      border-color: #ffffff;
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(13, 89, 197, 0.4);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
     }
 
     .footer-col-title {
-      font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+      font-family: var(--font-sans);
       font-size: 1.25rem;
       color: #ffffff;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 22px;
       position: relative;
       padding-bottom: 10px;
@@ -2020,7 +2032,7 @@ i, i:before, i:after,
       left: 0;
       width: 30px;
       height: 2px;
-      background: #0d59c5;
+      background: #ffffff;
       border-radius: 2px;
     }
 
@@ -2034,7 +2046,7 @@ i, i:before, i:after,
     }
 
     .footer-nav-list a {
-      color: #94a3b8;
+      color: #e2e8f0;
       text-decoration: none;
       font-size: 0.93rem;
       display: inline-flex;
@@ -2045,12 +2057,12 @@ i, i:before, i:after,
 
     .footer-nav-list a i {
       font-size: 0.85rem;
-      opacity: 0.6;
+      opacity: 0.8;
       transition: transform 0.3s ease;
     }
 
     .footer-nav-list a:hover {
-      color: #38bdf8;
+      color: #ffffff;
       padding-left: 6px;
     }
 
@@ -2067,7 +2079,7 @@ i, i:before, i:after,
 
     .footer-contact-item i {
       font-size: 1.25rem;
-      color: #38bdf8;
+      color: #ffffff;
       margin-top: 2px;
     }
 
@@ -2080,7 +2092,7 @@ i, i:before, i:after,
 
     .footer-contact-item div p {
       font-size: 0.85rem;
-      color: #94a3b8;
+      color: #e2e8f0;
       line-height: 1.45;
       margin: 0;
     }
@@ -2694,7 +2706,7 @@ i, i:before, i:after,
       width: 100%;
       height: 85vh;
       min-height: 680px;
-      background: #06152a;
+      background: #0052cc !important;
       overflow: hidden;
       color: #ffffff;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -2716,7 +2728,7 @@ i, i:before, i:after,
       height: 100%;
       width: 100%;
       overflow: hidden;
-      background: #030c18;
+      background: #0052cc !important;
     }
 
     .split-img-slide {
@@ -2745,7 +2757,7 @@ i, i:before, i:after,
     .split-left-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(3, 12, 24, 0.3) 0%, rgba(3, 12, 24, 0.1) 50%, rgba(3, 12, 24, 0.6) 100%);
+      background: linear-gradient(180deg, rgba(0, 82, 204, 0.3) 0%, rgba(0, 82, 204, 0.1) 50%, rgba(0, 82, 204, 0.6) 100%);
       z-index: 3;
       pointer-events: none;
     }
@@ -2755,7 +2767,7 @@ i, i:before, i:after,
       position: relative;
       height: 100%;
       width: 100%;
-      background: #071932;
+      background: #0052cc !important;
       display: flex;
       flex-direction: column;
       justify-content: center;
