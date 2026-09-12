@@ -1128,10 +1128,10 @@ i, i:before, i:after,
       margin-top: 50px;
     }
 
-    /* CARD STYLING WITH PURE BLUE #0052cc & WHITE ACCENTS */
+    /* SOLID WHITE METRIC CARDS WITH ROYAL BLUE #0052cc ACCENTS */
     .sims-metric-card {
-      background: rgba(255, 255, 255, 0.12) !important;
-      border: 2px solid #ffffff !important;
+      background: #ffffff !important;
+      border: 2px solid #0052cc !important;
       border-radius: 20px;
       padding: 36px 24px 28px;
       text-align: center;
@@ -1141,12 +1141,12 @@ i, i:before, i:after,
       position: relative;
       perspective: 1000px;
       transform-style: preserve-3d;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 35px rgba(0, 82, 204, 0.25);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
       overflow: hidden;
     }
 
-    /* CREATIVE CORNER NEON SPARK GLOW */
+    /* CREATIVE CORNER SPARK GLOW */
     .sims-metric-card::before {
       content: '';
       position: absolute;
@@ -1154,7 +1154,7 @@ i, i:before, i:after,
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(0, 82, 204, 0.08) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.5s ease;
       pointer-events: none;
@@ -1166,22 +1166,22 @@ i, i:before, i:after,
 
     .sims-metric-card:hover {
       transform: translateY(-10px) scale(1.02) rotateX(4deg);
-      border-color: #ffffff !important;
-      box-shadow: 0 20px 50px rgba(0, 82, 204, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.3);
+      border-color: #003399 !important;
+      box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
     }
 
-    /* CENTERED TOP ICON WITH RADAR SWEEP & SONAR PULSE */
+    /* CENTERED TOP ICON WITH ROYAL BLUE ACCENT */
     .sims-metric-icon-center {
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      background: rgba(0, 82, 204, 0.08);
+      border: 2px solid #0052cc;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 82, 204, 0.15);
       position: relative;
       transition: var(--transition);
     }
@@ -1192,7 +1192,7 @@ i, i:before, i:after,
       position: absolute;
       inset: -5px;
       border-radius: 50%;
-      border: 1.5px dashed rgba(255, 255, 255, 0.6);
+      border: 1.5px dashed #0052cc;
       animation: radarRotate 8s linear infinite;
     }
 
@@ -1202,7 +1202,7 @@ i, i:before, i:after,
       position: absolute;
       inset: -2px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(0, 82, 204, 0.4);
       animation: sonarPulseRing 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
     }
 
@@ -1218,18 +1218,19 @@ i, i:before, i:after,
 
     .sims-metric-icon-center i {
       font-size: 1.6rem;
-      color: #ffffff;
+      color: #0052cc !important;
       transition: transform 0.3s ease;
       z-index: 2;
     }
 
     .sims-metric-card:hover .sims-metric-icon-center {
-      border-color: #ffffff;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
-      background: rgba(255, 255, 255, 0.25);
+      border-color: #003399;
+      box-shadow: 0 0 25px rgba(0, 82, 204, 0.35);
+      background: #0052cc;
     }
 
     .sims-metric-card:hover .sims-metric-icon-center i {
+      color: #ffffff !important;
       animation: waveIcon 1.2s ease-in-out infinite;
     }
 
@@ -1244,12 +1245,12 @@ i, i:before, i:after,
       100% { transform: rotate(0deg) scale(1); }
     }
 
-    /* CENTERED BOLD WHITE METRIC VAL */
+    /* CENTERED BOLD ROYAL BLUE METRIC VAL */
     .sims-metric-val {
       font-family: var(--font-sans);
       font-size: 3.2rem;
       font-weight: 800;
-      color: #ffffff;
+      color: #0052cc !important;
       line-height: 1;
       letter-spacing: -1px;
       margin-bottom: 24px;
@@ -1258,7 +1259,7 @@ i, i:before, i:after,
     }
 
     .sims-metric-val span {
-      color: #ffffff;
+      color: #0052cc !important;
     }
 
     /* PROGRESS BAR WRAPPER WITH PERCENTAGE TEXT */
@@ -1267,7 +1268,7 @@ i, i:before, i:after,
       display: flex;
       justify-content: flex-end;
       font-size: 0.9rem;
-      color: #ffffff;
+      color: #0052cc !important;
       font-weight: 800;
       margin-bottom: 6px;
       padding-right: 4px;
@@ -1276,38 +1277,30 @@ i, i:before, i:after,
     .sims-progress-wrap {
       width: 100%;
       height: 14px;
-      background: rgba(0, 40, 100, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: #e2e8f0 !important;
+      border: 1px solid #cbd5e1 !important;
       border-radius: 20px;
       padding: 2px;
       position: relative;
       margin-bottom: 20px;
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
       overflow: hidden;
     }
 
-    /* LIQUID SHIMMER FLOWING PROGRESS FILL BAR */
+    /* SOLID ROYAL BLUE PROGRESS FILL BAR */
     .sims-progress-bar {
       width: 0%;
       height: 100%;
-      background: linear-gradient(90deg, #ffffff 0%, #00e5ff 50%, #ffffff 100%);
-      background-size: 200% 100%;
-      animation: liquidShimmer 3.5s linear infinite;
+      background: #0052cc !important;
       border-radius: 20px;
-      box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 10px rgba(0, 82, 204, 0.4);
       transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes liquidShimmer {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     /* BOTTOM LABEL CAPTION */
     .sims-metric-label {
       font-size: 0.9rem;
-      color: #ffffff !important;
+      color: #0f172a !important;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -2876,13 +2869,13 @@ i, i:before, i:after,
 
     .split-thumb-dot:hover {
       transform: scale(1.18);
-      border-color: #00e5ff;
+      border-color: #ffffff;
     }
 
     .split-thumb-dot.active {
       transform: scale(1.22);
       border-color: #ffffff;
-      box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
     }
 
     /* TOP RIGHT CLEAN ARROW CONTROLS (NO CIRCLES, LARGER ICONS) */
