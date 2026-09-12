@@ -1335,7 +1335,7 @@ i, i:before, i:after,
     }
 
     .radial-counter-card {
-      background: #0052cc !important;
+      background: #ffffff !important;
       border: 2px solid #0052cc !important;
       border-radius: 20px;
       padding: 38px 24px;
@@ -1343,16 +1343,16 @@ i, i:before, i:after,
       flex-direction: column;
       align-items: center;
       text-align: center;
-      color: #ffffff !important;
-      box-shadow: 0 12px 30px rgba(0, 82, 204, 0.3);
+      color: #0f172a !important;
+      box-shadow: 0 12px 35px rgba(0, 82, 204, 0.2);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .radial-counter-card:hover {
       transform: translateY(-8px);
-      background: #0040a8 !important;
-      border-color: #ffffff !important;
-      box-shadow: 0 20px 42px rgba(0, 82, 204, 0.45);
+      background: #ffffff !important;
+      border-color: #003399 !important;
+      box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
     }
 
     .card-top-icon-circle {
@@ -1360,12 +1360,13 @@ i, i:before, i:after,
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 82, 204, 0.08);
+      border: 2px solid #0052cc;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
-      color: #ffffff;
+      color: #0052cc;
       margin-bottom: 20px;
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -1375,21 +1376,21 @@ i, i:before, i:after,
       position: absolute;
       inset: -6px;
       border-radius: 50%;
-      border: 1.5px dashed rgba(255, 255, 255, 0.45);
+      border: 1.5px dashed #0052cc;
       animation: spinDashedRing 12s linear infinite;
       transition: all 0.35s ease;
     }
 
     .radial-counter-card:hover .card-top-icon-circle {
       transform: scale(1.08);
-      background: rgba(0, 229, 255, 0.18);
-      color: #00e5ff;
+      background: #0052cc;
+      color: #ffffff;
     }
 
     .radial-counter-card:hover .card-top-icon-circle::before {
-      border-color: #00e5ff;
+      border-color: #003399;
       animation-duration: 4s;
-      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+      box-shadow: 0 0 15px rgba(0, 82, 204, 0.3);
     }
 
     @keyframes spinDashedRing {
@@ -1409,7 +1410,7 @@ i, i:before, i:after,
       align-items: center;
       font-size: 0.72rem;
       font-weight: 800;
-      color: rgba(255, 255, 255, 0.75);
+      color: #0052cc;
       margin-bottom: 6px;
       letter-spacing: 1px;
     }
@@ -1417,14 +1418,14 @@ i, i:before, i:after,
     .card-progress-track {
       width: 100%;
       height: 6px;
-      background: rgba(255, 255, 255, 0.12);
+      background: #e2e8f0;
       border-radius: 10px;
       overflow: hidden;
     }
 
     .card-progress-bar {
       height: 100%;
-      background: linear-gradient(90deg, #00e5ff 0%, #ffffff 100%);
+      background: #0052cc !important;
       border-radius: 10px;
       transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -1443,19 +1444,19 @@ i, i:before, i:after,
     }
 
     .radial-counter-circle circle.bg-ring {
-      stroke: rgba(255, 255, 255, 0.1);
+      stroke: #e2e8f0;
       stroke-width: 7;
       fill: transparent;
     }
 
     .radial-counter-circle circle.meter-ring {
-      stroke: #00e5ff;
+      stroke: #0052cc;
       stroke-width: 7;
       stroke-dasharray: 283;
       stroke-linecap: round;
       fill: transparent;
       transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);
-      filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.7));
+      filter: drop-shadow(0 0 6px rgba(0, 82, 204, 0.4));
     }
 
     .radial-counter-val {
@@ -1466,14 +1467,14 @@ i, i:before, i:after,
       justify-content: center;
       font-size: 1.55rem;
       font-weight: 900;
-      color: #ffffff;
+      color: #0052cc !important;
       font-family: var(--font-sans);
     }
 
     .radial-counter-title {
       font-size: 0.92rem;
       font-weight: 800;
-      color: #cbd5e1;
+      color: #0f172a !important;
       text-transform: uppercase;
       letter-spacing: 1.2px;
       line-height: 1.4;
