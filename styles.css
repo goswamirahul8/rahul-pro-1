@@ -1666,7 +1666,7 @@ i, i:before, i:after,
 
     .milestones-media-col {
       position: relative;
-      background-image: linear-gradient(180deg, rgba(7, 22, 44, 0.45) 0%, rgba(7, 22, 44, 0.85) 100%), url('assets/images/sharp_ship_hero.png');
+      background-image: url('assets/images/sharp_ship_hero.png');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -1675,15 +1675,7 @@ i, i:before, i:after,
     }
 
     .milestones-media-badge {
-      background: rgba(11, 31, 58, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      padding: 24px 30px;
-      border-radius: 12px;
-      color: #ffffff;
-      max-width: 420px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      display: none !important;
     }
 
     .milestones-media-badge h4 {
