@@ -2219,17 +2219,18 @@ i, i:before, i:after,
     }
 
     .compliance-icon-wrap {
-      width: 54px;
-      height: 54px;
-      background: rgba(0, 82, 204, 0.08);
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 82, 204, 0.08) !important;
+      border: 2px solid #0052cc !important;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 18px;
-      color: #0052cc;
+      color: #0052cc !important;
       font-size: 1.6rem;
-      transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, color 0.3s ease;
+      transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
       position: relative;
     }
 
@@ -2259,9 +2260,10 @@ i, i:before, i:after,
 
     .compliance-card:hover .compliance-icon-wrap {
       transform: scale(1.15) translateY(-3px);
-      background: #0284c7;
-      color: #ffffff;
-      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+      background: #0052cc !important;
+      color: #ffffff !important;
+      border-color: #0052cc !important;
+      box-shadow: 0 8px 20px rgba(0, 82, 204, 0.35) !important;
     }
 
     .compliance-card-title {
