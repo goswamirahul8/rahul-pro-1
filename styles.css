@@ -3001,7 +3001,8 @@ body {
   .split-slide-desc { font-size: 0.95rem; }
   .split-counter-badge { top: 20px; left: 6%; font-size: 0.85rem; }
   
-  .achievements-grid { grid-template-columns: 1fr; gap: 24px; }
+  .achievements-grid, .radial-counter-grid { grid-template-columns: 1fr !important; gap: 24px !important; width: 100% !important; }
+  .radial-counter-card { width: 100% !important; padding: 30px 18px !important; }
   .radial-circle { width: 140px; height: 140px; }
   .gauge-percentage { font-size: 2rem; }
   
@@ -3017,6 +3018,9 @@ body {
   .sims-logo-svg { height: 24px !important; max-width: 120px !important; }
   .sims-pill-btn { display: none !important; }
   .sims-menu-toggle { width: 34px !important; height: 34px !important; font-size: 1rem !important; }
+  
+  .radial-counter-grid { grid-template-columns: 1fr !important; gap: 18px !important; width: 100% !important; }
+  .radial-counter-card { width: 100% !important; padding: 26px 16px !important; }
   
   .sims-hero-headline-bottom { font-size: 1.95rem; }
   .sims-sec-title { font-size: 1.85rem !important; }
