@@ -2094,7 +2094,7 @@ i, i:before, i:after,
       flex-wrap: wrap;
       gap: 20px;
       font-size: 0.88rem;
-      color: #ffffff;
+      color: #ffffff !important;
     }
 
     .footer-bottom-links {
@@ -2103,14 +2103,14 @@ i, i:before, i:after,
     }
 
     .footer-bottom-links a {
-      color: #ffffff;
+      color: #ffffff !important;
       text-decoration: none;
       opacity: 0.9;
       transition: all 0.3s ease;
     }
 
     .footer-bottom-links a:hover {
-      color: #ffffff;
+      color: #ffffff !important;
       opacity: 1;
       text-decoration: underline;
     }
