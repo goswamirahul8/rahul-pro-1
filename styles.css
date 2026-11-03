@@ -1917,6 +1917,7 @@ body {
   font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 60px;
+  padding-bottom: 0 !important;
 }
 
 .sims-footer::before {
@@ -3664,5 +3665,468 @@ body {
 
   100% {
     transform: rotate(15deg) scale(1.18);
+  }
+}
+
+/* ========================================================
+   REALISTIC FLOWING WATER STREAM WITH SUBMERGED BRAND TEXT
+   (Based on User Reference with Crystal Water & Splashes)
+   ======================================================== */
+.footer-flowing-water-sec {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Water stream animated tracks */
+.water-stream-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/images/water_wave_hd.png');
+  background-repeat: repeat-x;
+  background-size: 1024px 230px;
+  will-change: background-position;
+}
+
+/* Back water stream flowing slightly slower with subtle parallax */
+.water-stream-back {
+  z-index: 1;
+  opacity: 0.55;
+  filter: hue-rotate(-12deg) brightness(0.9);
+  animation: streamFlowRight 18s linear infinite;
+  transform: scaleY(1.06) translateY(-5px);
+}
+
+/* The Submerged Big Brand Text sitting directly inside/under the water */
+.water-text-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.water-submerged-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: clamp(3rem, 9.5vw, 8.8rem);
+  font-weight: 900;
+  letter-spacing: clamp(6px, 1.8vw, 18px);
+  text-transform: uppercase;
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  /* Crystal aquatic underwater gradient */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(224, 242, 254, 0.88) 32%,
+    rgba(56, 189, 248, 0.72) 65%,
+    rgba(2, 132, 199, 0.4) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Water caustics and light refraction glow */
+  text-shadow: 0 4px 30px rgba(56, 189, 248, 0.55);
+  animation: waterCausticPulse 5s ease-in-out infinite alternate;
+}
+
+/* Front water stream flowing smoothly in front of the text */
+.water-stream-front {
+  z-index: 3;
+  opacity: 0.92;
+  animation: streamFlowRight 12s linear infinite;
+}
+
+/* Ambient water droplets overlay with soft sheen */
+.water-droplets-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: radial-gradient(ellipse at 50% 60%, rgba(56, 189, 248, 0.12) 0%, transparent 75%);
+  pointer-events: none;
+}
+
+/* Infinite smooth stream flow keyframes */
+@keyframes streamFlowRight {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1024px;
+  }
+}
+
+/* Underwater gentle undulating wave motion */
+@keyframes waterCausticPulse {
+  0% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.35));
+  }
+  50% {
+    transform: translateY(-5px) scale(1.008);
+    filter: drop-shadow(0 0 25px rgba(14, 165, 233, 0.7));
+  }
+  100% {
+    transform: translateY(3px) scale(0.995);
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.45));
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-flowing-water-sec {
+    height: 140px;
+    margin-top: 15px;
+  }
+  .water-stream-track {
+    background-size: 640px 140px;
+  }
+  @keyframes streamFlowRight {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 640px;
+    }
+  }
+  .water-submerged-title {
+    font-size: clamp(2rem, 8vw, 3.8rem);
+    letter-spacing: 5px;
+  }
+}
+
+
+
+
+
+
+/* ========================================================
+   FULL-WIDTH EDGE-TO-EDGE CORDELIA-STYLE LUXURY SHIP FOOTER
+   (Left, Center, Right Balanced Layout - No Text Overlap)
+   ======================================================== */
+.cordelia-footer-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  color: #1e293b;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cordelia-footer-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.cordelia-footer-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+/* Main 3-Column Content Grid: Left (Brand) | Center (MENU) | Right (CONTACT US) */
+.cf-main-grid {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.35fr;
+  gap: 40px 60px;
+  padding: 65px 5% 55px 5%;
+  align-items: start;
+  background: #ffffff;
+  position: relative;
+  z-index: 5;
+}
+
+/* Column 1 (Left): Brand, Desc, Socials, Certs */
+.cf-col-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-brand-logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.cf-brand-desc {
+  font-size: 0.94rem;
+  line-height: 1.68;
+  color: #64748b;
+  margin: 0 0 20px 0;
+  max-width: 360px;
+}
+
+.cf-social-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.cf-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 82, 204, 0.08);
+  color: #0052cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cf-social-btn:hover {
+  background: #0052cc;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25);
+}
+
+.cf-certs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cf-cert-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* Column Titles (MENU & CONTACT US) */
+.cf-col-title {
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 22px 0;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.cf-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: #0052cc;
+  border-radius: 2px;
+}
+
+/* Column 2 (Center): MENU */
+.cf-col-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.cf-link-list li a {
+  color: #475569;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.cf-link-list li a:hover {
+  color: #0052cc;
+  transform: translateX(6px);
+}
+
+/* Column 3 (Right): CONTACT US */
+.cf-col-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.cf-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.cf-contact-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.cf-contact-address-row {
+  margin-bottom: 6px;
+}
+
+.cf-label {
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cf-contact-address-row .cf-label {
+  min-width: 120px;
+}
+
+.cf-val {
+  color: #334155;
+  word-break: break-word;
+}
+
+.cf-val a {
+  color: #334155;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cf-val a:hover {
+  color: #0052cc;
+  text-decoration: underline;
+}
+
+/* Bottom Ocean & Ship Banner (Completely below content - NO TEXT OVERLAP) */
+.cf-bottom-banner {
+  width: 100%;
+  background-image: url('assets/images/footer_ship_ocean_clean_hd.png?v=3.5');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 5% 32px 5%;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* Inner bottom bar container matching main grid width */
+.cf-bottom-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.cf-bottom-left {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+.cf-bottom-right {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+.cf-bottom-right a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cf-bottom-right a:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cf-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 45px 5% 35px 5%;
+  }
+  .cf-col-brand {
+    grid-column: span 2;
+  }
+  .cf-bottom-banner {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cf-main-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 35px 5% 25px 5%;
+  }
+  .cf-col-brand {
+    grid-column: span 1;
+  }
+  .cf-contact-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .cf-bottom-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+  .cf-bottom-banner {
+    min-height: 260px;
+    padding: 0 5% 24px 5%;
   }
 }
