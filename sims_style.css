@@ -296,8 +296,10 @@ body {
   font-weight: 700;
 }
 
-.sims-drawer-menu-links a:hover {
-  color: var(--sims-cyan-glow);
+.sims-drawer-menu-links a:hover,
+.sims-drawer-menu-links a:focus,
+.sims-drawer-menu-links a.active {
+  color: #0052cc !important;
   transform: translateX(15px);
 }
 

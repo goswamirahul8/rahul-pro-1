@@ -25,23 +25,50 @@
   box-sizing: border-box;
 }
 
-body, html, p, a, span, div, li, button, input, textarea,
-h1, h2, h3, h4, h5, h6,
-.sims-sec-title, .sims-sec-subtitle,
-.pixel-split-title, .pixel-split-text,
-.op3-card-title, .op3-card-desc,
-.split-slide-title, .split-slide-desc,
-.radial-sec-title, .milestones-header-title,
-.compliance-title, .capability-title,
-.footer-cta-text h3, .footer-watermark,
-.sims-hero-headline-bottom, .sims-metric-val, .sims-metric-label {
+body,
+html,
+p,
+a,
+span,
+div,
+li,
+button,
+input,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sims-sec-title,
+.sims-sec-subtitle,
+.pixel-split-title,
+.pixel-split-text,
+.op3-card-title,
+.op3-card-desc,
+.split-slide-title,
+.split-slide-desc,
+.radial-sec-title,
+.milestones-header-title,
+.compliance-title,
+.capability-title,
+.footer-cta-text h3,
+.footer-watermark,
+.sims-hero-headline-bottom,
+.sims-metric-val,
+.sims-metric-label {
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 /* STRICT REMIXICON FONT PRESERVATION (RESTORES ALL ARROWS, GLOBES & HAMBURGER ICONS) */
-i, i:before, i:after,
-[class^="ri-"], [class*=" ri-"],
-[class^="ri-"]:before, [class*=" ri-"]:before {
+i,
+i:before,
+i:after,
+[class^="ri-"],
+[class*=" ri-"],
+[class^="ri-"]:before,
+[class*=" ri-"]:before {
   font-family: 'remixicon' !important;
   font-style: normal !important;
   -webkit-font-smoothing: antialiased;
@@ -312,8 +339,10 @@ i, i:before, i:after,
   font-weight: 700;
 }
 
-.sims-drawer-menu-links a:hover {
-  color: var(--sims-cyan-glow);
+.sims-drawer-menu-links a:hover,
+.sims-drawer-menu-links a:focus,
+.sims-drawer-menu-links a.active {
+  color: #0052cc !important;
   transform: translateX(15px);
 }
 
@@ -603,7 +632,8 @@ i, i:before, i:after,
   transition: var(--transition);
 }
 
-.sims-vtab.active, .sims-vtab:hover {
+.sims-vtab.active,
+.sims-vtab:hover {
   background: #eff6ff;
   border-color: var(--sims-blue-accent);
 }
@@ -753,2152 +783,2244 @@ i, i:before, i:after,
 }
 
 @media (max-width: 992px) {
-  .sims-hero-headline-bottom { font-size: 3.2rem; }
-  .sims-cards-grid, .sims-metrics-grid, .sims-solutions-grid, .sims-cert-grid, .sims-drawer-grid { grid-template-columns: 1fr; }
-  .sims-cta-sec { flex-direction: column; text-align: center; }
+  .sims-hero-headline-bottom {
+    font-size: 3.2rem;
+  }
+
+  .sims-cards-grid,
+  .sims-metrics-grid,
+  .sims-solutions-grid,
+  .sims-cert-grid,
+  .sims-drawer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sims-cta-sec {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
 /* ================= EMBEDDED HOMEPAGE STYLES ================= */
 
-    /* GLOBAL OVERFLOW & VIEWPORT LOCK (ELIMINATES RIGHT WHITE OVERFLOW STRIP) */
-    html, body {
-      width: 100% !important;
-      max-width: 100% !important;
-      overflow-x: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      box-sizing: border-box;
-    }
-
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
-
-    /* Fixed Smart Scroll-Aware Header Transition - Original Width Preserved */
-    .sims-header-container {
-      position: fixed;
-      top: 24px;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 0 5%;
-      pointer-events: none;
-      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-    }
-
-    .sims-header-container.header-hidden {
-      transform: translateY(-140%);
-      opacity: 0;
-    }
-
-    .sims-navbar {
-      pointer-events: auto;
-      max-width: 1320px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    /* WHITE THEME CONTRAST OVERRIDES WHEN SCROLLED */
-    #main-nav.scrolled,
-    .sims-navbar.scrolled {
-      background: #ffffff !important;
-      border-color: #cbd5e1 !important;
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.18) !important;
-    }
-
-    /* Logo turns sharp Black / Dark Navy (#07162c) */
-    #main-nav.scrolled .sims-logo-svg,
-    .sims-navbar.scrolled .sims-logo-svg {
-      color: #07162c !important;
-    }
-
-    #main-nav.scrolled .sims-logo-svg path,
-    .sims-navbar.scrolled .sims-logo-svg path {
-      fill: #07162c !important;
-    }
-
-    /* ENG Button turns Black text & Black border */
-    #main-nav.scrolled .sims-lang-btn,
-    .sims-navbar.scrolled .sims-lang-btn {
-      background: #f1f5f9 !important;
-      border: 1.5px solid #07162c !important;
-      color: #07162c !important;
-    }
-
-    #main-nav.scrolled .sims-lang-btn i,
-    .sims-navbar.scrolled .sims-lang-btn i {
-      color: #07162c !important;
-    }
-
-    /* Contact Us Pill Button */
-    #main-nav.scrolled .sims-pill-btn,
-    .sims-navbar.scrolled .sims-pill-btn {
-      background: #0052cc !important;
-      color: #ffffff !important;
-    }
-
-    #main-nav.scrolled .sims-pill-btn .dot-prefix,
-    .sims-navbar.scrolled .sims-pill-btn .dot-prefix {
-      background: #ffffff !important;
-    }
-
-    /* 3-Line Hamburger Menu Toggle: Black 3-line icon + White box + 2px Solid Black Border */
-    #main-nav.scrolled .sims-menu-toggle,
-    .sims-navbar.scrolled .sims-menu-toggle {
-      background: #ffffff !important;
-      color: #07162c !important;
-      border: 2px solid #07162c !important;
-      box-shadow: 0 2px 10px rgba(7, 22, 44, 0.15) !important;
-    }
-
-    #main-nav.scrolled .sims-menu-toggle i,
-    .sims-navbar.scrolled .sims-menu-toggle i {
-      color: #07162c !important;
-    }
-
-    /* Fullscreen 100% Crisp YouTube HD Ship Video Background (ID: V23kBNrdjyE) */
-    .sims-hero-media-wrap {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      overflow: hidden;
-      background-color: #07162c;
-      pointer-events: none !important;
-    }
-
-    .sims-hero-youtube-iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100vw;
-      height: 100vh;
-      min-width: 177.77vh; /* 16:9 ratio scaling */
-      min-height: 56.25vw;
-      transform: translate(-50%, -50%) scale(1.6);
-      border: none;
-      pointer-events: none !important;
-      filter: none !important;
-      -webkit-filter: none !important;
-      opacity: 1 !important;
-    }
-
-    /* Invisible Shield Overlay to prevent any cursor interaction with YouTube player */
-    .sims-hero-video-blocker {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 3;
-      background: transparent;
-      pointer-events: auto;
-    }
-
-    .sims-hero-fallback-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      filter: none !important;
-    }
-
-    /* Minimal Overlay for Readability */
-    .sims-hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: linear-gradient(0deg, rgba(7, 22, 44, 0.75) 0%, rgba(7, 22, 44, 0.15) 50%, transparent 80%);
-      pointer-events: none;
-      filter: none !important;
-    }
-
-    /* Drawer Link Styling */
-    .sims-drawer-menu-links a {
-      font-family: var(--font-serif);
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: #ffffff;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 18px;
-      transition: var(--transition);
-    }
-
-    .sims-drawer-menu-links a:hover {
-      color: var(--sims-cyan-glow);
-      transform: translateX(12px);
-    }
-
-    /* Pixelite3D Exact Light Split 2-Column Section Styling */
-    .pixel-split-sec {
-      background-color: #ffffff;
-      padding: 100px 5%;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .pixel-split-container {
-      max-width: 1320px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    /* 1. EXACT PIXELITE3D COLORED CURTAIN MASK WIPE FOR HEADING */
-    .pixel-curtain-heading-wrap {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      padding: 4px 0;
-    }
-
-    .pixel-curtain-heading-wrap::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, #0052cc, #00b4d8); /* Royal Blue to Electric Cyan Curtain */
-      transform: scaleX(0);
-      transform-origin: left center;
-      z-index: 5;
-    }
-
-    .pixel-curtain-heading-wrap.pixel-animated::after {
-      animation: pixelCurtainWipe 1.05s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    }
-
-    .pixel-split-title {
-      font-family: var(--font-serif);
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: #07162c;
-      line-height: 1.15;
-      margin: 0;
-      opacity: 0; /* Hidden before scroll trigger */
-      transition: opacity 0.1s ease 0.45s; /* Reveals title right as curtain sweeps over it */
-    }
-
-    .pixel-curtain-heading-wrap.pixel-animated .pixel-split-title {
-      opacity: 1; /* Revealed on scroll trigger */
-    }
-
-    .pixel-split-title span {
-      color: #0052cc; /* Royal Blue Highlight matching Baijnath Melaram Palette */
-      display: block;
-    }
-
-    @keyframes pixelCurtainWipe {
-      0% {
-        transform: scaleX(0);
-        transform-origin: left center;
-      }
-      50% {
-        transform: scaleX(1);
-        transform-origin: left center;
-      }
-      50.1% {
-        transform: scaleX(1);
-        transform-origin: right center;
-      }
-      100% {
-        transform: scaleX(0);
-        transform-origin: right center;
-      }
-    }
-
-    /* 2. STAGGERED FADE-IN UP FOR PARAGRAPH & BUTTON ON SCROLL */
-    .pixel-fade-up {
-      opacity: 0; /* Hidden before scroll */
-      transform: translateY(50px); /* Positioned lower before scroll */
-      transition: opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1), transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
-      transition-delay: 0.3s;
-    }
-
-    .pixel-fade-up.pixel-animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .pixel-split-text {
-      font-family: var(--font-sans);
-      font-size: 1.05rem;
-      color: #475569;
-      line-height: 1.8;
-      margin: 24px 0 36px 0;
-    }
-
-    /* 3. SIDE 3D IMAGE REVEAL ANIMATION ON SCROLL */
-    .pixel-clip-image {
-      position: relative;
-      width: 100%;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(7, 22, 44, 0.12);
-      background: #ffffff;
-      padding: 16px;
-      border: 1px solid #cbd5e1;
-      opacity: 0; /* Hidden before scroll */
-      transform: translateX(80px) scale(0.95); /* Slide from right + scale down */
-      transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
-      transition-delay: 0.15s;
-    }
-
-    .pixel-clip-image.pixel-animated {
-      opacity: 1;
-      transform: translateX(0) scale(1.0);
-    }
-
-    .pixel-3d-img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      display: block;
-      animation: floatGraphic 4.5s ease-in-out infinite 1.3s;
-    }
-
-    @keyframes floatGraphic {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    @media (max-width: 992px) {
-      .pixel-split-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .pixel-split-title {
-        font-size: 2.4rem;
-      }
-    }
-
-    /* High-Tech Dashboard Dark Section (Matching Pure Blue #0052cc & White Theme) */
-    .sims-metrics-sec-dark {
-      background: #0052cc !important;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px) !important;
-      background-size: 24px 24px;
-      color: #ffffff;
-      padding: 100px 5%;
-      position: relative;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .sims-metrics-container {
-      max-width: 1320px;
-      margin: 0 auto;
-    }
-
-    .sims-sec-header-center {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .sims-sec-header-center .sims-sec-title {
-      font-family: var(--font-sans);
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin: 0 0 6px 0;
-    }
-
-    .sims-sec-header-center .sims-sec-subtitle {
-      color: #ffffff;
-      opacity: 0.9;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-    .sims-metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 50px;
-    }
-
-    /* SOLID WHITE METRIC CARDS WITH ROYAL BLUE #0052cc ACCENTS */
-    .sims-metric-card {
-      background: #ffffff !important;
-      border: 2px solid #0052cc !important;
-      border-radius: 20px;
-      padding: 36px 24px 28px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      perspective: 1000px;
-      transform-style: preserve-3d;
-      box-shadow: 0 12px 35px rgba(0, 82, 204, 0.25);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-      overflow: hidden;
-    }
-
-    /* CREATIVE CORNER SPARK GLOW */
-    .sims-metric-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(0, 82, 204, 0.08) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      pointer-events: none;
-    }
-
-    .sims-metric-card:hover::before {
-      opacity: 1;
-    }
-
-    .sims-metric-card:hover {
-      transform: translateY(-10px) scale(1.02) rotateX(4deg);
-      border-color: #003399 !important;
-      box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
-    }
-
-    /* CENTERED TOP ICON WITH ROYAL BLUE ACCENT */
-    .sims-metric-icon-center {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: rgba(0, 82, 204, 0.08);
-      border: 2px solid #0052cc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 15px rgba(0, 82, 204, 0.15);
-      position: relative;
-      transition: var(--transition);
-    }
-
-    /* RADAR DASHED ROTATING RING */
-    .sims-metric-icon-center::before {
-      content: '';
-      position: absolute;
-      inset: -5px;
-      border-radius: 50%;
-      border: 1.5px dashed #0052cc;
-      animation: radarRotate 8s linear infinite;
-    }
-
-    /* SONAR PULSE EXPANDING AURA RING */
-    .sims-metric-icon-center::after {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 50%;
-      border: 1px solid rgba(0, 82, 204, 0.4);
-      animation: sonarPulseRing 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
-    }
-
-    @keyframes radarRotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes sonarPulseRing {
-      0% { transform: scale(0.9); opacity: 0.8; }
-      100% { transform: scale(1.6); opacity: 0; }
-    }
-
-    .sims-metric-icon-center i {
-      font-size: 1.6rem;
-      color: #0052cc !important;
-      transition: transform 0.3s ease;
-      z-index: 2;
-    }
-
-    .sims-metric-card:hover .sims-metric-icon-center {
-      border-color: #003399;
-      box-shadow: 0 0 25px rgba(0, 82, 204, 0.35);
-      background: #0052cc;
-    }
-
-    .sims-metric-card:hover .sims-metric-icon-center i {
-      color: #ffffff !important;
-      animation: waveIcon 1.2s ease-in-out infinite;
-    }
-
-    /* Keyframes Wave/Ripple Icon Animation */
-    @keyframes waveIcon {
-      0% { transform: rotate(0deg) scale(1); }
-      15% { transform: rotate(-18deg) scale(1.25); }
-      30% { transform: rotate(18deg) scale(1.25); }
-      45% { transform: rotate(-12deg) scale(1.2); }
-      60% { transform: rotate(12deg) scale(1.2); }
-      75% { transform: rotate(-6deg) scale(1.1); }
-      100% { transform: rotate(0deg) scale(1); }
-    }
-
-    /* CENTERED BOLD ROYAL BLUE METRIC VAL */
-    .sims-metric-val {
-      font-family: var(--font-sans);
-      font-size: 3.2rem;
-      font-weight: 800;
-      color: #0052cc !important;
-      line-height: 1;
-      letter-spacing: -1px;
-      margin-bottom: 24px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .sims-metric-val span {
-      color: #0052cc !important;
-    }
-
-    /* PROGRESS BAR WRAPPER WITH PERCENTAGE TEXT */
-    .sims-progress-meta {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      font-size: 0.9rem;
-      color: #0052cc !important;
-      font-weight: 800;
-      margin-bottom: 6px;
-      padding-right: 4px;
-    }
-
-    .sims-progress-wrap {
-      width: 100%;
-      height: 14px;
-      background: #e2e8f0 !important;
-      border: 1px solid #cbd5e1 !important;
-      border-radius: 20px;
-      padding: 2px;
-      position: relative;
-      margin-bottom: 20px;
-      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    }
-
-    /* SOLID ROYAL BLUE PROGRESS FILL BAR */
-    .sims-progress-bar {
-      width: 0%;
-      height: 100%;
-      background: #0052cc !important;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0, 82, 204, 0.4);
-      transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* BOTTOM LABEL CAPTION */
-    .sims-metric-label {
-      font-size: 0.9rem;
-      color: #0f172a !important;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      opacity: 0.95;
-    }
-
-    /* RADIAL RING PERFORMANCE COUNTERS SECTION (CLEAN WHITE BACKGROUND THEME) */
-    .radial-counter-section {
-      background: #ffffff;
-      padding: 75px 5%;
-      border-bottom: 1px solid #e2e8f0;
-      position: relative;
-      width: 100%;
-    }
-
-    .radial-sec-title {
-      text-align: center;
-      font-size: 2.3rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 45px;
-      letter-spacing: -0.5px;
-      text-transform: capitalize;
-    }
-
-    .radial-counter-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px 28px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .radial-counter-card {
-      background: #ffffff !important;
-      border: 2px solid #0052cc !important;
-      border-radius: 20px;
-      padding: 38px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      color: #0f172a !important;
-      box-shadow: 0 12px 35px rgba(0, 82, 204, 0.2);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .radial-counter-card:hover {
-      transform: translateY(-8px);
-      background: #ffffff !important;
-      border-color: #003399 !important;
-      box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
-    }
-
-    .card-top-icon-circle {
-      position: relative;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: rgba(0, 82, 204, 0.08);
-      border: 2px solid #0052cc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      color: #0052cc;
-      margin-bottom: 20px;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .card-top-icon-circle::before {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      border: 1.5px dashed #0052cc;
-      animation: spinDashedRing 12s linear infinite;
-      transition: all 0.35s ease;
-    }
-
-    .radial-counter-card:hover .card-top-icon-circle {
-      transform: scale(1.08);
-      background: #0052cc;
-      color: #ffffff;
-    }
-
-    .radial-counter-card:hover .card-top-icon-circle::before {
-      border-color: #003399;
-      animation-duration: 4s;
-      box-shadow: 0 0 15px rgba(0, 82, 204, 0.3);
-    }
-
-    @keyframes spinDashedRing {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* CARD BOTTOM PROGRESS BAR (MATCHING REFERENCE IMAGE) */
-    .card-progress-wrap {
-      width: 100%;
-      margin-top: 18px;
-    }
-
-    .card-progress-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #0052cc;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-    }
-
-    .card-progress-track {
-      width: 100%;
-      height: 6px;
-      background: #e2e8f0;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .card-progress-bar {
-      height: 100%;
-      background: #0052cc !important;
-      border-radius: 10px;
-      transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .radial-counter-circle {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin-bottom: 22px;
-    }
-
-    .radial-counter-circle svg {
-      width: 100%;
-      height: 100%;
-      transform: rotate(-90deg);
-    }
-
-    .radial-counter-circle circle.bg-ring {
-      stroke: #e2e8f0;
-      stroke-width: 7;
-      fill: transparent;
-    }
-
-    .radial-counter-circle circle.meter-ring {
-      stroke: #0052cc;
-      stroke-width: 7;
-      stroke-dasharray: 283;
-      stroke-linecap: round;
-      fill: transparent;
-      transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);
-      filter: drop-shadow(0 0 6px rgba(0, 82, 204, 0.4));
-    }
-
-    .radial-counter-val {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.55rem;
-      font-weight: 900;
-      color: #0052cc !important;
-      font-family: var(--font-sans);
-    }
-
-    .radial-counter-title {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: #0f172a !important;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      line-height: 1.4;
-    }
-
-    /* SEAMLESS FULL SCREEN 100VW x 100VH VESSEL SCROLL SECTION */
-    .legacy-pinned-vessel-sec {
-      background: #ffffff;
-      padding: 0;
-      margin: 0;
-      position: relative;
-      width: 100vw;
-      overflow: hidden;
-    }
-
-    .legacy-vessel-container {
-      width: 100vw;
-      max-width: 100vw;
-      padding: 0;
-      margin: 0;
-    }
-
-    .legacy-vessel-image-wrap {
-      position: relative;
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: none;
-      border: none;
-      width: 100vw;
-      height: 100vh;
-      transform: translateX(100%);
-      opacity: 0;
-      will-change: transform, opacity;
-      transition: transform 0.08s ease-out, opacity 0.08s ease-out;
-    }
-
-    .legacy-vessel-img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      display: block;
-      transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .legacy-vessel-image-wrap:hover .legacy-vessel-img {
-      transform: scale(1.04);
-    }
-
-    .legacy-vessel-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(6, 21, 42, 0.8) 100%);
-      display: flex;
-      align-items: flex-end;
-      padding: 32px 40px;
-      pointer-events: none;
-    }
-
-    .legacy-vessel-badge {
-      display: none !important;
-    }
-
-    /* OUR VALUED PARTNERS FIXED PARALLAX SHIP BANNER */
-    .our-partners-sec {
-      position: relative;
-      width: 100%;
-      padding: 100px 0 110px 0;
-      background-color: #0052cc;
-      background-image: linear-gradient(180deg, rgba(0, 82, 204, 0.6) 0%, rgba(0, 51, 153, 0.7) 100%), url('assets/images/sharp_ship_hero.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed !important;
-      overflow: hidden;
-    }
-
-    .partners-inner-container {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 0 50px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .partners-header {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .partners-title-box {
-      display: inline-block;
-      background: transparent !important;
-      color: #ffffff !important;
-      font-size: 2.6rem;
-      font-weight: 800;
-      padding: 0;
-      border-radius: 0;
-      letter-spacing: -0.5px;
-      box-shadow: none !important;
-      text-transform: capitalize;
-    }
-
-    .partners-marquee-wrap {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-
-    .partners-marquee-track {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      width: max-content;
-      animation: infiniteMarquee 38s linear infinite;
-    }
-
-    .partners-marquee-wrap:hover .partners-marquee-track {
-      animation-play-state: paused;
-    }
-
-    .partner-card-box {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 14px 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 210px;
-      height: 82px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .partner-card-box:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-
-    .partner-card-box img {
-      max-height: 50px;
-      max-width: 160px;
-      object-fit: contain;
-      filter: none;
-    }
-
-    @keyframes infiniteMarquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* MILESTONES ACHIEVED SPLIT SECTION (WITH TOP AND BOTTOM PADDING) */
-    .milestones-sec {
-      position: relative;
-      width: 100%;
-      background: #f4f3ee;
-      overflow: hidden;
-      border-top: 1px solid #e5e2d8;
-      padding: 80px 0;
-    }
-
-    .milestones-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.15fr;
-      min-height: 640px;
-    }
-
-    .milestones-media-col {
-      position: relative;
-      background-image: url('assets/images/sharp_ship_hero.png');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-end;
-      padding: 60px 50px;
-    }
-
-    .milestones-media-badge {
-      display: none !important;
-    }
-
-    .milestones-media-badge h4 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #00e5ff;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .milestones-media-badge p {
-      font-size: 0.92rem;
-      line-height: 1.5;
-      opacity: 0.9;
-      margin: 0;
-    }
-
-    .milestones-content-col {
-      padding: 80px 70px 80px 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: #f4f3ee;
-    }
-
-    .milestones-header-title {
-      font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
-      font-size: 3.1rem;
-      font-weight: 600;
-      color: #0b1f3a;
-      letter-spacing: -0.5px;
-      margin-bottom: 14px;
-      line-height: 1.15;
-    }
-
-    .milestones-header-desc {
-      font-size: 1.05rem;
-      color: #556270;
-      line-height: 1.6;
-      max-width: 620px;
-      margin-bottom: 45px;
-    }
-
-    .milestones-list {
-      display: flex;
-      flex-direction: column;
-      border-top: 1px solid #d4d0c5;
-    }
-
-    .milestones-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 16px;
-      border-bottom: 1px solid #d4d0c5;
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    .milestones-item:hover {
-      background: #ffffff;
-      padding-left: 24px;
-      box-shadow: 0 8px 25px rgba(11, 31, 58, 0.07);
-    }
-
-    .milestones-item-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #0b1f3a;
-      transition: color 0.3s ease;
-    }
-
-    .milestones-item:hover .milestones-item-title {
-      color: #0d59c5;
-    }
-
-    .milestones-item-right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .milestones-meta-tag {
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      background: #e2dfd5;
-      color: #4a5568;
-      border-radius: 4px;
-      opacity: 0;
-      transform: translateX(-8px);
-      transition: all 0.3s ease;
-    }
-
-    .milestones-item:hover .milestones-meta-tag {
-      opacity: 1;
-      transform: translateX(0);
-      background: #e0edff;
-      color: #0d59c5;
-    }
-
-    .milestones-icon-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 1px solid #c4c0b4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0b1f3a;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-
-    .milestones-item:hover .milestones-icon-btn {
-      background: #0d59c5;
-      border-color: #0d59c5;
-      color: #ffffff;
-      transform: translateY(2px);
-    }
-
-    @media (max-width: 992px) {
-      .milestones-grid {
-        grid-template-columns: 1fr;
-      }
-      .milestones-media-col {
-        min-height: 340px;
-      }
-      .milestones-content-col {
-        padding: 50px 30px;
-      }
-    }
-
-    /* HIGH-END UNIQUE INDUSTRIAL LUXURY FOOTER STYLES */
-    .sims-footer {
-      background: #0052cc !important;
-      color: #ffffff;
-      position: relative;
-      overflow: hidden;
-      font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding-top: 60px;
-    }
-
-    .sims-footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1000px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .footer-cta-strip {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 0 30px;
-      position: relative;
-      z-index: 2;
-      transform: translateY(-40px);
-    }
-
-    .footer-cta-card {
-      background: #ffffff !important;
-      color: #0f172a !important;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 2px solid #ffffff;
-      border-radius: 16px;
-      padding: 35px 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-    }
-
-    .footer-cta-text h3 {
-      color: #0f172a !important;
-    }
-
-    .footer-cta-text p {
-      color: #475569 !important;
-    }
-
-    .footer-cta-text h3 {
-      font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .footer-cta-text p {
-      color: #cbd5e1;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    .footer-cta-btns {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .footer-primary-btn {
-      background: #0d59c5;
-      color: #ffffff;
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 25px rgba(13, 89, 197, 0.4);
-      transition: all 0.3s ease;
-    }
-
-    .footer-primary-btn:hover {
-      background: #00e5ff;
-      color: #040d1a;
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0, 229, 255, 0.4);
-    }
-
-    .footer-outline-btn {
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: #ffffff;
-      padding: 14px 26px;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .footer-outline-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: #ffffff;
-    }
-
-    .footer-main-container {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 30px 30px 40px 30px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 0.9fr 0.9fr 1.3fr;
-      gap: 50px;
-      margin-bottom: 50px;
-    }
-
-    .footer-col-brand p {
-      font-size: 0.92rem;
-      line-height: 1.6;
-      color: #e2e8f0;
-      margin: 20px 0 25px 0;
-      max-width: 340px;
-    }
-
-    .footer-cert-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 25px;
-    }
-
-    .footer-cert-pill {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 5px 12px;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #ffffff;
-      border-radius: 20px;
-    }
-
-    .footer-social-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer-social-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-social-icon:hover {
-      background: #ffffff;
-      color: #0052cc;
-      border-color: #ffffff;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
-    }
-
-    .footer-col-title {
-      font-family: var(--font-sans);
-      font-size: 1.25rem;
-      color: #ffffff;
-      font-weight: 700;
-      margin-bottom: 22px;
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .footer-col-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 30px;
-      height: 2px;
-      background: #ffffff;
-      border-radius: 2px;
-    }
-
-    .footer-nav-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-nav-list a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 0.93rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .footer-nav-list a i {
-      font-size: 0.85rem;
-      opacity: 0.8;
-      transition: transform 0.3s ease;
-    }
-
-    .footer-nav-list a:hover {
-      color: #ffffff;
-      padding-left: 6px;
-    }
-
-    .footer-nav-list a:hover i {
-      opacity: 1;
-      transform: translateX(4px);
-    }
-
-    .footer-contact-item {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .footer-contact-item i {
-      font-size: 1.25rem;
-      color: #ffffff;
-      margin-top: 2px;
-    }
-
-    .footer-contact-item div h5 {
-      color: #ffffff;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-
-    .footer-contact-item div p {
-      font-size: 0.85rem;
-      color: #e2e8f0;
-      line-height: 1.45;
-      margin: 0;
-    }
-
-    .footer-watermark {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
-      font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
-      font-size: clamp(3rem, 11vw, 11rem);
-      font-weight: 900;
-      letter-spacing: 12px;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.015);
-      white-space: nowrap;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    .footer-bottom-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 25px 0 30px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 0.88rem;
-      color: #ffffff !important;
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-bottom-links a {
-      color: #ffffff !important;
-      text-decoration: none;
-      opacity: 0.9;
-      transition: all 0.3s ease;
-    }
-
-    .footer-bottom-links a:hover {
-      color: #ffffff !important;
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 992px) {
-      .footer-cta-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 25px;
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-      .footer-bottom-bar {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    /* RECOGNIZED FOR OUR EXCELLENCE / OUR IMPACT (WHITE CARDS MATCHING USER SCREENSHOT) */
-    .compliance-excellence-sec {
-      background: #ffffff;
-      padding: 85px 0 95px 0;
-      position: relative;
-      width: 100%;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .compliance-container {
-      max-width: 1380px;
-      margin: 0 auto;
-      padding: 0 30px;
-    }
-
-    .compliance-header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .compliance-subtitle {
-      font-size: 0.85rem;
-      font-weight: 800;
-      color: #0052cc;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .compliance-title {
-      font-size: clamp(2rem, 3.2vw, 2.8rem);
-      font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.5px;
-    }
-
-    .compliance-title span {
-      font-family: var(--font-sans);
-      font-style: normal;
-      font-weight: 800;
-      color: #0052cc;
-    }
-
-    .compliance-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-    }
-
-    .compliance-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 36px 20px;
-      text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .compliance-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(0, 82, 204, 0.15);
-      border-color: #0052cc;
-    }
-
-    .compliance-icon-wrap {
-      width: 56px;
-      height: 56px;
-      background: rgba(0, 82, 204, 0.08) !important;
-      border: 2px solid #0052cc !important;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      color: #0052cc !important;
-      font-size: 1.6rem;
-      transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-    }
-
-    .compliance-icon-wrap i {
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
-
-    .compliance-card:hover .compliance-icon-wrap i {
-      animation: iconWave 0.8s ease-in-out infinite;
-    }
-
-    @keyframes iconWave {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      25% {
-        transform: translateY(-4px) rotate(-10deg);
-      }
-      50% {
-        transform: translateY(-1px) rotate(8deg);
-      }
-      75% {
-        transform: translateY(-5px) rotate(-5deg);
-      }
-    }
-
-    .compliance-card:hover .compliance-icon-wrap {
-      transform: scale(1.15) translateY(-3px);
-      background: #0052cc !important;
-      color: #ffffff !important;
-      border-color: #0052cc !important;
-      box-shadow: 0 8px 20px rgba(0, 82, 204, 0.35) !important;
-    }
-
-    .compliance-card-title {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-    }
-
-    .compliance-card-desc {
-      font-size: 0.88rem;
-      color: #64748b;
-      line-height: 1.45;
-      font-weight: 600;
-    }
-
-    @media (max-width: 1100px) {
-      .compliance-cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .compliance-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .compliance-cards-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* OPTION C: HORIZONTAL ACCORDION EXPANDABLE SLIDER (CLEAN WHITE THEME) */
-    .sims-extensions-sec {
-      background: #ffffff;
-      padding: 95px 5%;
-      border-bottom: 1px solid #e2e8f0;
-      position: relative;
-    }
-
-    .sims-extensions-sec .sims-sec-title {
-      color: #0f172a;
-    }
-
-    .sims-extensions-sec .sims-sec-subtitle {
-      color: #0052cc;
-    }
-
-    .sims-extensions-container {
-      max-width: 1320px;
-      margin: 0 auto;
-    }
-
-    .option3-container {
-      display: flex;
-      gap: 20px;
-      height: 490px;
-      margin-top: 40px;
-    }
-
-    .op3-strip {
-      flex: 1;
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    }
-
-    .op3-strip:hover, .op3-strip.expanded {
-      border-color: #0052cc;
-      box-shadow: 0 20px 45px rgba(0, 82, 204, 0.18);
-    }
-
-    .op3-strip.expanded {
-      flex: 3.8;
-    }
-
-    .op3-strip-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.45;
-      transition: opacity 0.5s ease, transform 0.6s ease;
-    }
-
-    .op3-strip.expanded .op3-strip-img {
-      opacity: 1;
-      transform: scale(1.03);
-    }
-
-    .op3-content-vertical {
-      display: none !important;
-    }
-
-    .op3-content-full {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 36px 32px;
-      background: linear-gradient(to top, rgba(255, 255, 255, 0.98) 70%, rgba(255, 255, 255, 0.6) 92%, transparent);
-      color: #0f172a;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
-    }
-
-    .op3-strip.expanded .op3-content-full {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .extension-badge {
-      display: inline-block;
-      background: #0052cc;
-      color: #ffffff;
-      padding: 6px 16px;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
-    }
-
-    .op3-card-title {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin: 4px 0 10px 0;
-      letter-spacing: -0.5px;
-    }
-
-    .op3-card-desc {
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: #334155;
-      margin-bottom: 4px;
-      max-width: 720px;
-      font-weight: 500;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-
-    .op3-card-desc.full-text {
-      display: block;
-      -webkit-line-clamp: unset;
-      line-clamp: unset;
-      overflow: visible;
-    }
-
-    .op3-readmore-trigger {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      color: #0052cc;
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      margin-top: 2px;
-      transition: color 0.3s ease;
-    }
-
-    .op3-readmore-trigger:hover {
-      color: #003399;
-      text-decoration: underline;
-    }
-
-    /* OUR CAPABILITIES BENTO GRID SECTION (ROYAL BLUE #0052cc THEME) */
-    .capabilities-section {
-      background-color: #0052cc;
-      color: #ffffff;
-      padding: 95px 5%;
-      width: 100%;
-      position: relative;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
-    }
-
-    .capabilities-section .sims-sec-header-center {
-      margin-bottom: 35px;
-    }
-
-    .capabilities-section .sims-sec-header-center .sims-sec-title {
-      color: #ffffff !important;
-      font-size: 2.6rem !important;
-      font-weight: 900 !important;
-      letter-spacing: 2px !important;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 12px;
-      margin-bottom: 8px !important;
-    }
-
-    .capabilities-section .sims-sec-header-center .sims-sec-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: #ffffff;
-      border-radius: 4px;
-    }
-
-    .capabilities-section .sims-sec-header-center .sims-sec-subtitle {
-      color: #ffffff !important;
-      font-size: 1.15rem !important;
-      font-weight: 600 !important;
-      margin-top: 10px;
-      opacity: 0.95;
-      letter-spacing: 0.5px;
-    }
-
-    .capabilities-container {
-      max-width: 1320px;
-      margin: 0 auto;
-    }
-
-    .fleet-filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 40px;
-      width: 100%;
-    }
-
-    .filter-btn {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1.5px solid rgba(255, 255, 255, 0.35);
-      color: #ffffff;
-      padding: 10px 24px;
-      border-radius: 50px;
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      backdrop-filter: blur(8px);
-      outline: none;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: #ffffff !important;
-      color: #0052cc !important;
-      border-color: #ffffff !important;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .bento-card {
-      background-color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 16px;
-      padding: 30px 26px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-      opacity: 0;
-      transform: translateY(50px) scale(0.92);
-      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
-      will-change: opacity, transform;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 220px;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .bento-card.card-revealed {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-
-    .bento-card.card-revealed:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
-      border-color: #ffffff;
-    }
-
-    .blueprint-art-wrapper {
-      width: 100%;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px dashed #cbd5e1;
-      transition: border-color 0.4s ease;
-      perspective: 800px;
-    }
-
-    .bento-card:hover .blueprint-art-wrapper {
-      border-bottom-color: #0052cc;
-    }
-
-    .ship-blueprint-svg {
-      width: 100%;
-      height: 62px;
-      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
-      filter: drop-shadow(0 6px 12px rgba(0, 82, 204, 0.18));
-      transform-style: preserve-3d;
-    }
-
-    .bento-card:hover .ship-blueprint-svg {
-      animation: blueprintWave 1.6s ease-in-out infinite;
-      filter: drop-shadow(0 14px 28px rgba(0, 82, 204, 0.4));
-    }
-
-    /* Keyframes Wave/Ripple Icon Animation for Capabilities Bento Grid */
-    @keyframes blueprintWave {
-      0% {
-        transform: translateY(-5px) rotateX(10deg) rotateY(-8deg) scale(1.08) rotate(0deg);
-      }
-      20% {
-        transform: translateY(-9px) rotateX(14deg) rotateY(-12deg) scale(1.12) rotate(-4deg);
-      }
-      40% {
-        transform: translateY(-3px) rotateX(6deg) rotateY(-4deg) scale(1.05) rotate(4deg);
-      }
-      60% {
-        transform: translateY(-8px) rotateX(12deg) rotateY(-10deg) scale(1.1) rotate(-3deg);
-      }
-      80% {
-        transform: translateY(-4px) rotateX(8deg) rotateY(-6deg) scale(1.07) rotate(2deg);
-      }
-      100% {
-        transform: translateY(-5px) rotateX(10deg) rotateY(-8deg) scale(1.08) rotate(0deg);
-      }
-    }
-
-    .capability-body {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .title-badge-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .capability-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.3px;
-      margin: 0;
-    }
-
-    .category-pill {
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background-color: #0052cc;
-      color: #ffffff;
-      padding: 4px 10px;
-      border-radius: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .bento-card:hover .category-pill {
-      transform: scale(1.06);
-    }
-
-    .capability-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-style: italic;
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: #0052cc;
-      text-decoration: none;
-      transition: gap 0.3s ease;
-    }
-
-    .arrow-icon {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.3s ease;
-    }
-
-    .bento-card:hover .capability-link {
-      gap: 12px;
-      color: #003399;
-    }
-
-    .bento-card:hover .arrow-icon {
-      transform: translateX(4px);
-    }
-
-    /* ==========================================================================
+/* GLOBAL OVERFLOW & VIEWPORT LOCK (ELIMINATES RIGHT WHITE OVERFLOW STRIP) */
+html,
+body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Fixed Smart Scroll-Aware Header Transition - Original Width Preserved */
+.sims-header-container {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 5%;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.sims-header-container.header-hidden {
+  transform: translateY(-140%);
+  opacity: 0;
+}
+
+.sims-navbar {
+  pointer-events: auto;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* WHITE THEME CONTRAST OVERRIDES WHEN SCROLLED */
+#main-nav.scrolled,
+.sims-navbar.scrolled {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.18) !important;
+}
+
+/* Logo turns sharp Black / Dark Navy (#07162c) */
+#main-nav.scrolled .sims-logo-svg,
+.sims-navbar.scrolled .sims-logo-svg {
+  color: #07162c !important;
+}
+
+#main-nav.scrolled .sims-logo-svg path,
+.sims-navbar.scrolled .sims-logo-svg path {
+  fill: #07162c !important;
+}
+
+/* ENG Button turns Black text & Black border */
+#main-nav.scrolled .sims-lang-btn,
+.sims-navbar.scrolled .sims-lang-btn {
+  background: #f1f5f9 !important;
+  border: 1.5px solid #07162c !important;
+  color: #07162c !important;
+}
+
+#main-nav.scrolled .sims-lang-btn i,
+.sims-navbar.scrolled .sims-lang-btn i {
+  color: #07162c !important;
+}
+
+/* Contact Us Pill Button */
+#main-nav.scrolled .sims-pill-btn,
+.sims-navbar.scrolled .sims-pill-btn {
+  background: #0052cc !important;
+  color: #ffffff !important;
+}
+
+#main-nav.scrolled .sims-pill-btn .dot-prefix,
+.sims-navbar.scrolled .sims-pill-btn .dot-prefix {
+  background: #ffffff !important;
+}
+
+/* 3-Line Hamburger Menu Toggle: Black 3-line icon + White box + 2px Solid Black Border */
+#main-nav.scrolled .sims-menu-toggle,
+.sims-navbar.scrolled .sims-menu-toggle {
+  background: #ffffff !important;
+  color: #07162c !important;
+  border: 2px solid #07162c !important;
+  box-shadow: 0 2px 10px rgba(7, 22, 44, 0.15) !important;
+}
+
+#main-nav.scrolled .sims-menu-toggle i,
+.sims-navbar.scrolled .sims-menu-toggle i {
+  color: #07162c !important;
+}
+
+/* Fullscreen 100% Crisp YouTube HD Ship Video Background (ID: V23kBNrdjyE) */
+.sims-hero-media-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #07162c;
+  pointer-events: none !important;
+}
+
+.sims-hero-youtube-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 177.77vh;
+  /* 16:9 ratio scaling */
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%) scale(1.6);
+  border: none;
+  pointer-events: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Invisible Shield Overlay to prevent any cursor interaction with YouTube player */
+.sims-hero-video-blocker {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.sims-hero-fallback-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: none !important;
+}
+
+/* Minimal Overlay for Readability */
+.sims-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(0deg, rgba(7, 22, 44, 0.75) 0%, rgba(7, 22, 44, 0.15) 50%, transparent 80%);
+  pointer-events: none;
+  filter: none !important;
+}
+
+/* Drawer Link Styling */
+.sims-drawer-menu-links a {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  transition: var(--transition);
+}
+
+.sims-drawer-menu-links a:hover,
+.sims-drawer-menu-links a:focus,
+.sims-drawer-menu-links a.active {
+  color: #0052cc !important;
+  transform: translateX(12px);
+}
+
+/* Pixelite3D Exact Light Split 2-Column Section Styling */
+.pixel-split-sec {
+  background-color: #ffffff;
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pixel-split-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* 1. EXACT PIXELITE3D COLORED CURTAIN MASK WIPE FOR HEADING */
+.pixel-curtain-heading-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 4px 0;
+}
+
+.pixel-curtain-heading-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0052cc, #00b4d8);
+  /* Royal Blue to Electric Cyan Curtain */
+  transform: scaleX(0);
+  transform-origin: left center;
+  z-index: 5;
+}
+
+.pixel-curtain-heading-wrap.pixel-animated::after {
+  animation: pixelCurtainWipe 1.05s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.pixel-split-title {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #07162c;
+  line-height: 1.15;
+  margin: 0;
+  opacity: 0;
+  /* Hidden before scroll trigger */
+  transition: opacity 0.1s ease 0.45s;
+  /* Reveals title right as curtain sweeps over it */
+}
+
+.pixel-curtain-heading-wrap.pixel-animated .pixel-split-title {
+  opacity: 1;
+  /* Revealed on scroll trigger */
+}
+
+.pixel-split-title span {
+  color: #0052cc;
+  /* Royal Blue Highlight matching Baijnath Melaram Palette */
+  display: block;
+}
+
+@keyframes pixelCurtainWipe {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+/* 2. STAGGERED FADE-IN UP FOR PARAGRAPH & BUTTON ON SCROLL */
+.pixel-fade-up {
+  opacity: 0;
+  /* Hidden before scroll */
+  transform: translateY(50px);
+  /* Positioned lower before scroll */
+  transition: opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1), transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.3s;
+}
+
+.pixel-fade-up.pixel-animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pixel-split-text {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.8;
+  margin: 24px 0 36px 0;
+}
+
+/* 3. SIDE 3D IMAGE REVEAL ANIMATION ON SCROLL */
+.pixel-clip-image {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(7, 22, 44, 0.12);
+  background: #ffffff;
+  padding: 16px;
+  border: 1px solid #cbd5e1;
+  opacity: 0;
+  /* Hidden before scroll */
+  transform: translateX(80px) scale(0.95);
+  /* Slide from right + scale down */
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.15s;
+}
+
+.pixel-clip-image.pixel-animated {
+  opacity: 1;
+  transform: translateX(0) scale(1.0);
+}
+
+.pixel-3d-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  animation: floatGraphic 4.5s ease-in-out infinite 1.3s;
+}
+
+@keyframes floatGraphic {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .pixel-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pixel-split-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* High-Tech Dashboard Dark Section (Matching Pure Blue #0052cc & White Theme) */
+.sims-metrics-sec-dark {
+  background: #0052cc !important;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px) !important;
+  background-size: 24px 24px;
+  color: #ffffff;
+  padding: 100px 5%;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sims-metrics-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.sims-sec-header-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sims-sec-header-center .sims-sec-title {
+  font-family: var(--font-sans);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+.sims-sec-header-center .sims-sec-subtitle {
+  color: #ffffff;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.sims-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+/* SOLID WHITE METRIC CARDS WITH ROYAL BLUE #0052cc ACCENTS */
+.sims-metric-card {
+  background: #ffffff !important;
+  border: 2px solid #0052cc !important;
+  border-radius: 20px;
+  padding: 36px 24px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  box-shadow: 0 12px 35px rgba(0, 82, 204, 0.25);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+/* CREATIVE CORNER SPARK GLOW */
+.sims-metric-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 82, 204, 0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.sims-metric-card:hover::before {
+  opacity: 1;
+}
+
+.sims-metric-card:hover {
+  transform: translateY(-10px) scale(1.02) rotateX(4deg);
+  border-color: #003399 !important;
+  box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
+}
+
+/* CENTERED TOP ICON WITH ROYAL BLUE ACCENT */
+.sims-metric-icon-center {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 82, 204, 0.08);
+  border: 2px solid #0052cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 82, 204, 0.15);
+  position: relative;
+  transition: var(--transition);
+}
+
+/* RADAR DASHED ROTATING RING */
+.sims-metric-icon-center::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1.5px dashed #0052cc;
+  animation: radarRotate 8s linear infinite;
+}
+
+/* SONAR PULSE EXPANDING AURA RING */
+.sims-metric-icon-center::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 82, 204, 0.4);
+  animation: sonarPulseRing 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+@keyframes radarRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sonarPulseRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.sims-metric-icon-center i {
+  font-size: 1.6rem;
+  color: #0052cc !important;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.sims-metric-card:hover .sims-metric-icon-center {
+  border-color: #003399;
+  box-shadow: 0 0 25px rgba(0, 82, 204, 0.35);
+  background: #0052cc;
+}
+
+.sims-metric-card:hover .sims-metric-icon-center i {
+  color: #ffffff !important;
+  animation: waveIcon 1.2s ease-in-out infinite;
+}
+
+/* Keyframes Wave/Ripple Icon Animation */
+@keyframes waveIcon {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  15% {
+    transform: rotate(-18deg) scale(1.25);
+  }
+
+  30% {
+    transform: rotate(18deg) scale(1.25);
+  }
+
+  45% {
+    transform: rotate(-12deg) scale(1.2);
+  }
+
+  60% {
+    transform: rotate(12deg) scale(1.2);
+  }
+
+  75% {
+    transform: rotate(-6deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* CENTERED BOLD ROYAL BLUE METRIC VAL */
+.sims-metric-val {
+  font-family: var(--font-sans);
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0052cc !important;
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.sims-metric-val span {
+  color: #0052cc !important;
+}
+
+/* PROGRESS BAR WRAPPER WITH PERCENTAGE TEXT */
+.sims-progress-meta {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  color: #0052cc !important;
+  font-weight: 800;
+  margin-bottom: 6px;
+  padding-right: 4px;
+}
+
+.sims-progress-wrap {
+  width: 100%;
+  height: 14px;
+  background: #e2e8f0 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 20px;
+  padding: 2px;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* SOLID ROYAL BLUE PROGRESS FILL BAR */
+.sims-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #0052cc !important;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 82, 204, 0.4);
+  transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* BOTTOM LABEL CAPTION */
+.sims-metric-label {
+  font-size: 0.9rem;
+  color: #0f172a !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.95;
+}
+
+/* RADIAL RING PERFORMANCE COUNTERS SECTION (CLEAN WHITE BACKGROUND THEME) */
+.radial-counter-section {
+  background: #ffffff;
+  padding: 75px 5%;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+  width: 100%;
+}
+
+.radial-sec-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 45px;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+}
+
+.radial-counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.radial-counter-card {
+  background: #ffffff !important;
+  border: 2px solid #0052cc !important;
+  border-radius: 20px;
+  padding: 38px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #0f172a !important;
+  box-shadow: 0 12px 35px rgba(0, 82, 204, 0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.radial-counter-card:hover {
+  transform: translateY(-8px);
+  background: #ffffff !important;
+  border-color: #003399 !important;
+  box-shadow: 0 22px 50px rgba(0, 82, 204, 0.35);
+}
+
+.card-top-icon-circle {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(0, 82, 204, 0.08);
+  border: 2px solid #0052cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #0052cc;
+  margin-bottom: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-top-icon-circle::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px dashed #0052cc;
+  animation: spinDashedRing 12s linear infinite;
+  transition: all 0.35s ease;
+}
+
+.radial-counter-card:hover .card-top-icon-circle {
+  transform: scale(1.08);
+  background: #0052cc;
+  color: #ffffff;
+}
+
+.radial-counter-card:hover .card-top-icon-circle::before {
+  border-color: #003399;
+  animation-duration: 4s;
+  box-shadow: 0 0 15px rgba(0, 82, 204, 0.3);
+}
+
+@keyframes spinDashedRing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* CARD BOTTOM PROGRESS BAR (MATCHING REFERENCE IMAGE) */
+.card-progress-wrap {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.card-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #0052cc;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.card-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-progress-bar {
+  height: 100%;
+  background: #0052cc !important;
+  border-radius: 10px;
+  transition: width 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.radial-counter-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 22px;
+}
+
+.radial-counter-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radial-counter-circle circle.bg-ring {
+  stroke: #e2e8f0;
+  stroke-width: 7;
+  fill: transparent;
+}
+
+.radial-counter-circle circle.meter-ring {
+  stroke: #0052cc;
+  stroke-width: 7;
+  stroke-dasharray: 283;
+  stroke-linecap: round;
+  fill: transparent;
+  transition: stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 0 6px rgba(0, 82, 204, 0.4));
+}
+
+.radial-counter-val {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #0052cc !important;
+  font-family: var(--font-sans);
+}
+
+.radial-counter-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #0f172a !important;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+}
+
+/* SEAMLESS FULL SCREEN 100VW x 100VH VESSEL SCROLL SECTION */
+.legacy-pinned-vessel-sec {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.legacy-vessel-container {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.legacy-vessel-image-wrap {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 0.08s ease-out, opacity 0.08s ease-out;
+}
+
+.legacy-vessel-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.legacy-vessel-image-wrap:hover .legacy-vessel-img {
+  transform: scale(1.04);
+}
+
+.legacy-vessel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(6, 21, 42, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 32px 40px;
+  pointer-events: none;
+}
+
+.legacy-vessel-badge {
+  display: none !important;
+}
+
+/* OUR VALUED PARTNERS FIXED PARALLAX SHIP BANNER */
+.our-partners-sec {
+  position: relative;
+  width: 100%;
+  padding: 100px 0 110px 0;
+  background-color: #0052cc;
+  background-image: linear-gradient(180deg, rgba(0, 82, 204, 0.6) 0%, rgba(0, 51, 153, 0.7) 100%), url('assets/images/sharp_ship_hero.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  overflow: hidden;
+}
+
+.partners-inner-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.partners-title-box {
+  display: inline-block;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-size: 2.6rem;
+  font-weight: 800;
+  padding: 0;
+  border-radius: 0;
+  letter-spacing: -0.5px;
+  box-shadow: none !important;
+  text-transform: capitalize;
+}
+
+.partners-marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.partners-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  animation: infiniteMarquee 38s linear infinite;
+}
+
+.partners-marquee-wrap:hover .partners-marquee-track {
+  animation-play-state: paused;
+}
+
+.partner-card-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  height: 82px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.partner-card-box img {
+  max-height: 50px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: none;
+}
+
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* MILESTONES ACHIEVED SPLIT SECTION (WITH TOP AND BOTTOM PADDING) */
+.milestones-sec {
+  position: relative;
+  width: 100%;
+  background: #f4f3ee;
+  overflow: hidden;
+  border-top: 1px solid #e5e2d8;
+  padding: 80px 0;
+}
+
+.milestones-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  min-height: 640px;
+}
+
+.milestones-media-col {
+  position: relative;
+  background-image: url('assets/images/sharp_ship_hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 50px;
+}
+
+.milestones-media-badge {
+  display: none !important;
+}
+
+.milestones-media-badge h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #00e5ff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.milestones-media-badge p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.milestones-content-col {
+  padding: 80px 70px 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f4f3ee;
+}
+
+.milestones-header-title {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: 3.1rem;
+  font-weight: 600;
+  color: #0b1f3a;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.milestones-header-desc {
+  font-size: 1.05rem;
+  color: #556270;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 45px;
+}
+
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #d4d0c5;
+}
+
+.milestones-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  border-bottom: 1px solid #d4d0c5;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.milestones-item:hover {
+  background: #ffffff;
+  padding-left: 24px;
+  box-shadow: 0 8px 25px rgba(11, 31, 58, 0.07);
+}
+
+.milestones-item-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0b1f3a;
+  transition: color 0.3s ease;
+}
+
+.milestones-item:hover .milestones-item-title {
+  color: #0d59c5;
+}
+
+.milestones-item-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.milestones-meta-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: #e2dfd5;
+  color: #4a5568;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.milestones-item:hover .milestones-meta-tag {
+  opacity: 1;
+  transform: translateX(0);
+  background: #e0edff;
+  color: #0d59c5;
+}
+
+.milestones-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #c4c0b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b1f3a;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.milestones-item:hover .milestones-icon-btn {
+  background: #0d59c5;
+  border-color: #0d59c5;
+  color: #ffffff;
+  transform: translateY(2px);
+}
+
+@media (max-width: 992px) {
+  .milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .milestones-media-col {
+    min-height: 340px;
+  }
+
+  .milestones-content-col {
+    padding: 50px 30px;
+  }
+}
+
+/* HIGH-END UNIQUE INDUSTRIAL LUXURY FOOTER STYLES */
+.sims-footer {
+  background: #0052cc !important;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 60px;
+}
+
+.sims-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-cta-strip {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-40px);
+}
+
+.footer-cta-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid #ffffff;
+  border-radius: 16px;
+  padding: 35px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.footer-cta-text h3 {
+  color: #0f172a !important;
+}
+
+.footer-cta-text p {
+  color: #475569 !important;
+}
+
+.footer-cta-text h3 {
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-cta-text p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.footer-cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-primary-btn {
+  background: #0d59c5;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(13, 89, 197, 0.4);
+  transition: all 0.3s ease;
+}
+
+.footer-primary-btn:hover {
+  background: #00e5ff;
+  color: #040d1a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 229, 255, 0.4);
+}
+
+.footer-outline-btn {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-outline-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+.footer-main-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 30px 30px 40px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.3fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-col-brand p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin: 20px 0 25px 0;
+  max-width: 340px;
+}
+
+.footer-cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.footer-cert-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background: #ffffff;
+  color: #0052cc;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav-list a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.93rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-nav-list a i {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+
+.footer-nav-list a:hover i {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-contact-item i {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.footer-contact-item div h5 {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.footer-contact-item div p {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.footer-watermark {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: clamp(3rem, 11vw, 11rem);
+  font-weight: 900;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.015);
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 25px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.88rem;
+  color: #ffffff !important;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom-links a {
+  color: #ffffff !important;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff !important;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .footer-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 25px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* RECOGNIZED FOR OUR EXCELLENCE / OUR IMPACT (WHITE CARDS MATCHING USER SCREENSHOT) */
+.compliance-excellence-sec {
+  background: #ffffff;
+  padding: 85px 0 95px 0;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.compliance-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.compliance-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.compliance-subtitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0052cc;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.compliance-title {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.compliance-title span {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-weight: 800;
+  color: #0052cc;
+}
+
+.compliance-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.compliance-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 36px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.compliance-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 82, 204, 0.15);
+  border-color: #0052cc;
+}
+
+.compliance-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 82, 204, 0.08) !important;
+  border: 2px solid #0052cc !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #0052cc !important;
+  font-size: 1.6rem;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.compliance-icon-wrap i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.compliance-card:hover .compliance-icon-wrap i {
+  animation: iconWave 0.8s ease-in-out infinite;
+}
+
+@keyframes iconWave {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(-1px) rotate(8deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+}
+
+.compliance-card:hover .compliance-icon-wrap {
+  transform: scale(1.15) translateY(-3px);
+  background: #0052cc !important;
+  color: #ffffff !important;
+  border-color: #0052cc !important;
+  box-shadow: 0 8px 20px rgba(0, 82, 204, 0.35) !important;
+}
+
+.compliance-card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.compliance-card-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .compliance-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .compliance-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .compliance-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* OPTION C: HORIZONTAL ACCORDION EXPANDABLE SLIDER (CLEAN WHITE THEME) */
+.sims-extensions-sec {
+  background: #ffffff;
+  padding: 95px 5%;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.sims-extensions-sec .sims-sec-title {
+  color: #0f172a;
+}
+
+.sims-extensions-sec .sims-sec-subtitle {
+  color: #0052cc;
+}
+
+.sims-extensions-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.option3-container {
+  display: flex;
+  gap: 20px;
+  height: 490px;
+  margin-top: 40px;
+}
+
+.op3-strip {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.op3-strip:hover,
+.op3-strip.expanded {
+  border-color: #0052cc;
+  box-shadow: 0 20px 45px rgba(0, 82, 204, 0.18);
+}
+
+.op3-strip.expanded {
+  flex: 3.8;
+}
+
+.op3-strip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.45;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+.op3-strip.expanded .op3-strip-img {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.op3-content-vertical {
+  display: none !important;
+}
+
+.op3-content-full {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 36px 32px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.98) 70%, rgba(255, 255, 255, 0.6) 92%, transparent);
+  color: #0f172a;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+
+.op3-strip.expanded .op3-content-full {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.extension-badge {
+  display: inline-block;
+  background: #0052cc;
+  color: #ffffff;
+  padding: 6px 16px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.3);
+}
+
+.op3-card-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 4px 0 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.op3-card-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 4px;
+  max-width: 720px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.op3-card-desc.full-text {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
+.op3-readmore-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #0052cc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: color 0.3s ease;
+}
+
+.op3-readmore-trigger:hover {
+  color: #003399;
+  text-decoration: underline;
+}
+
+/* OUR CAPABILITIES BENTO GRID SECTION (ROYAL BLUE #0052cc THEME) */
+.capabilities-section {
+  background-color: #0052cc;
+  color: #ffffff;
+  padding: 95px 5%;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.15);
+}
+
+.capabilities-section .sims-sec-header-center {
+  margin-bottom: 35px;
+}
+
+.capabilities-section .sims-sec-header-center .sims-sec-title {
+  color: #ffffff !important;
+  font-size: 2.6rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+  margin-bottom: 8px !important;
+}
+
+.capabilities-section .sims-sec-header-center .sims-sec-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.capabilities-section .sims-sec-header-center .sims-sec-subtitle {
+  color: #ffffff !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  margin-top: 10px;
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+}
+
+.capabilities-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.fleet-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  outline: none;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffffff !important;
+  color: #0052cc !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 30px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(50px) scale(0.92);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  will-change: opacity, transform;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bento-card.card-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.bento-card.card-revealed:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+  border-color: #ffffff;
+}
+
+.blueprint-art-wrapper {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #cbd5e1;
+  transition: border-color 0.4s ease;
+  perspective: 800px;
+}
+
+.bento-card:hover .blueprint-art-wrapper {
+  border-bottom-color: #0052cc;
+}
+
+.ship-blueprint-svg {
+  width: 100%;
+  height: 62px;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+  filter: drop-shadow(0 6px 12px rgba(0, 82, 204, 0.18));
+  transform-style: preserve-3d;
+}
+
+.bento-card:hover .ship-blueprint-svg {
+  animation: blueprintWave 1.6s ease-in-out infinite;
+  filter: drop-shadow(0 14px 28px rgba(0, 82, 204, 0.4));
+}
+
+/* Keyframes Wave/Ripple Icon Animation for Capabilities Bento Grid */
+@keyframes blueprintWave {
+  0% {
+    transform: translateY(-5px) rotateX(10deg) rotateY(-8deg) scale(1.08) rotate(0deg);
+  }
+
+  20% {
+    transform: translateY(-9px) rotateX(14deg) rotateY(-12deg) scale(1.12) rotate(-4deg);
+  }
+
+  40% {
+    transform: translateY(-3px) rotateX(6deg) rotateY(-4deg) scale(1.05) rotate(4deg);
+  }
+
+  60% {
+    transform: translateY(-8px) rotateX(12deg) rotateY(-10deg) scale(1.1) rotate(-3deg);
+  }
+
+  80% {
+    transform: translateY(-4px) rotateX(8deg) rotateY(-6deg) scale(1.07) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(-5px) rotateX(10deg) rotateY(-8deg) scale(1.08) rotate(0deg);
+  }
+}
+
+.capability-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.title-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.capability-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.category-pill {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #0052cc;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover .category-pill {
+  transform: scale(1.06);
+}
+
+.capability-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-style: italic;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0052cc;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover .capability-link {
+  gap: 12px;
+  color: #003399;
+}
+
+.bento-card:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
        SPLIT SCREEN SLIDER SECTION (SLIDER REVOLUTION COFFEE SHOP STYLE TEMPLATE)
        ========================================================================== */
-    .split-slider-section {
-      position: relative;
-      width: 100%;
-      height: 85vh;
-      min-height: 680px;
-      background: #0052cc !important;
-      overflow: hidden;
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      margin-top: 80px;
-      margin-bottom: 80px;
-    }
+.split-slider-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 680px;
+  background: #0052cc !important;
+  overflow: hidden;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
-    .split-slider-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
+.split-slider-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
-    /* LEFT HALF: MEDIA SHOWCASE */
-    .split-left-panel {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background: #0052cc !important;
-    }
+/* LEFT HALF: MEDIA SHOWCASE */
+.split-left-panel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0052cc !important;
+}
 
-    .split-img-slide {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transform: translateY(40px) scale(1.05);
-      transition: transform 0.85s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.85s cubic-bezier(0.25, 1, 0.35, 1);
-      z-index: 1;
-    }
+.split-img-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(40px) scale(1.05);
+  transition: transform 0.85s cubic-bezier(0.25, 1, 0.35, 1), opacity 0.85s cubic-bezier(0.25, 1, 0.35, 1);
+  z-index: 1;
+}
 
-    .split-img-slide.active {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      z-index: 2;
-    }
+.split-img-slide.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 2;
+}
 
-    .split-img-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.split-img-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .split-left-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0, 82, 204, 0.3) 0%, rgba(0, 82, 204, 0.1) 50%, rgba(0, 82, 204, 0.6) 100%);
-      z-index: 3;
-      pointer-events: none;
-    }
+.split-left-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 82, 204, 0.3) 0%, rgba(0, 82, 204, 0.1) 50%, rgba(0, 82, 204, 0.6) 100%);
+  z-index: 3;
+  pointer-events: none;
+}
 
-    /* RIGHT HALF: CONTENT PANEL */
-    .split-right-panel {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      background: #0052cc !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 10% 80px 12%;
-      z-index: 4;
-    }
+/* RIGHT HALF: CONTENT PANEL */
+.split-right-panel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #0052cc !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 10% 80px 12%;
+  z-index: 4;
+}
 
-    /* FRACTION COUNTER TOP RIGHT */
-    .split-counter-badge {
-      display: none !important;
-    }
+/* FRACTION COUNTER TOP RIGHT */
+.split-counter-badge {
+  display: none !important;
+}
 
-    .split-text-slide {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+.split-text-slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-    .split-text-slide.active {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
+.split-text-slide.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .split-slide-subtitle {
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 2.5px;
-      color: #ffffff;
-      opacity: 0.9;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
+.split-slide-subtitle {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #ffffff;
+  opacity: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
 
-    .split-slide-title {
-      font-family: var(--font-sans);
-      font-size: 3.2rem;
-      font-weight: 900;
-      line-height: 1.1;
-      color: #ffffff;
-      margin-bottom: 22px;
-      letter-spacing: -0.5px;
-      text-transform: uppercase;
-    }
+.split-slide-title {
+  font-family: var(--font-sans);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
 
-    .split-slide-desc {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #cbd5e1;
-      margin-bottom: 32px;
-      max-width: 500px;
-    }
+.split-slide-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
 
-    .split-slide-btn {
-      align-self: flex-start;
-      background: #0052cc;
-      color: #ffffff;
-      padding: 14px 34px;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 0.88rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 10px 25px rgba(0, 82, 204, 0.4);
-      transition: all 0.3s ease;
-    }
+.split-slide-btn {
+  align-self: flex-start;
+  background: #0052cc;
+  color: #ffffff;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 82, 204, 0.4);
+  transition: all 0.3s ease;
+}
 
-    .split-slide-btn:hover {
-      background: #ffffff;
-      color: #06152a;
-      box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
-      transform: translateY(-3px);
-    }
+.split-slide-btn:hover {
+  background: #ffffff;
+  color: #06152a;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
 
-    /* CENTER VERTICAL THUMBNAILS ON SPLIT LINE */
-    .split-nav-thumbs {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+/* CENTER VERTICAL THUMBNAILS ON SPLIT LINE */
+.split-nav-thumbs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .split-thumb-dot {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.35);
-      background-size: cover;
-      background-position: center;
-      cursor: pointer;
-      position: relative;
-      transition: all 0.35s ease;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      outline: none;
-    }
+.split-thumb-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
 
-    .split-thumb-dot:hover {
-      transform: scale(1.18);
-      border-color: #ffffff;
-    }
+.split-thumb-dot:hover {
+  transform: scale(1.18);
+  border-color: #ffffff;
+}
 
-    .split-thumb-dot.active {
-      transform: scale(1.22);
-      border-color: #ffffff;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    }
+.split-thumb-dot.active {
+  transform: scale(1.22);
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
 
-    /* TOP RIGHT CLEAN ARROW CONTROLS (NO CIRCLES, LARGER ICONS) */
-    .split-vertical-arrows {
-      position: absolute;
-      top: 44px;
-      right: 8%;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
+/* TOP RIGHT CLEAN ARROW CONTROLS (NO CIRCLES, LARGER ICONS) */
+.split-vertical-arrows {
+  position: absolute;
+  top: 44px;
+  right: 8%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
 
-    .split-arrow-btn {
-      width: auto;
-      height: auto;
-      padding: 4px 6px;
-      border-radius: 0;
-      background: transparent !important;
-      border: none !important;
-      color: #94a3b8;
-      font-size: 2.3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      backdrop-filter: none;
-      transition: all 0.25s ease;
-      outline: none;
-      box-shadow: none !important;
-    }
+.split-arrow-btn {
+  width: auto;
+  height: auto;
+  padding: 4px 6px;
+  border-radius: 0;
+  background: transparent !important;
+  border: none !important;
+  color: #94a3b8;
+  font-size: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: none;
+  transition: all 0.25s ease;
+  outline: none;
+  box-shadow: none !important;
+}
 
-    .split-arrow-btn:hover {
-      background: transparent !important;
-      color: #0052cc;
-      border-color: transparent !important;
-      transform: scale(1.25);
-      box-shadow: none !important;
-      filter: drop-shadow(0 0 12px rgba(0, 82, 204, 0.85));
-    }
+.split-arrow-btn:hover {
+  background: transparent !important;
+  color: #0052cc;
+  border-color: transparent !important;
+  transform: scale(1.25);
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 12px rgba(0, 82, 204, 0.85));
+}
 
 /* ==========================================================================
    MASTER FULLY RESPONSIVE MEDIA QUERIES (MOBILE, TABLET, LAPTOP, DESKTOP)
@@ -2906,139 +3028,641 @@ i, i:before, i:after,
 
 /* 1. LARGE DESKTOPS & WIDESCREEN (1400px+) */
 @media (min-width: 1400px) {
-  .sims-sec-title { font-size: 3.5rem; }
-  .bento-grid { gap: 28px; }
+  .sims-sec-title {
+    font-size: 3.5rem;
+  }
+
+  .bento-grid {
+    gap: 28px;
+  }
 }
 
 /* 2. LAPTOPS & SMALL DESKTOPS (993px - 1200px) */
 @media (max-width: 1200px) {
-  .sims-hero-headline-bottom { font-size: 4rem; }
-  .bento-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .sims-cards-grid, .sims-metrics-grid { grid-template-columns: repeat(3, 1fr); }
-  .footer-main-grid { grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr; gap: 30px; }
+  .sims-hero-headline-bottom {
+    font-size: 4rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .sims-cards-grid,
+  .sims-metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr;
+    gap: 30px;
+  }
 }
 
 /* 3. TABLETS & SMALL LAPTOPS (769px - 992px) */
 @media (max-width: 992px) {
-  .sims-header-container { top: 16px; padding: 0 4%; }
-  .sims-navbar { padding: 10px 20px; }
-  .sims-logo-svg { height: 32px; }
-  
-  .sims-hero { min-height: 85vh; padding: 0 6% 60px; }
-  .sims-hero-headline-bottom { font-size: 3.2rem; }
-  
-  .pixel-split-container { grid-template-columns: 1fr; gap: 40px; }
-  .pixel-split-title { font-size: 2.4rem; }
-  
-  .sims-metrics-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
-  
-  .bento-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .capabilities-section { padding: 70px 4%; }
-  
-  .split-slider-container { grid-template-columns: 1fr; }
-  .split-left-panel { height: 360px; }
-  .split-nav-thumbs { top: 360px; left: 50%; transform: translate(-50%, -50%); flex-direction: row; gap: 12px; }
-  .split-right-panel { padding: 60px 6% 50px; }
-  .split-slider-section { height: auto; margin-top: 50px; margin-bottom: 50px; }
-  .split-slide-title { font-size: 2.2rem; }
-  
-  .achievements-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .achievements-section { padding: 70px 5%; margin-top: 50px; margin-bottom: 50px; }
-  
-  .sims-footer { padding: 60px 6% 30px; }
-  .footer-main-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 30px; }
-  .footer-watermark { font-size: 8vw; }
+  .sims-header-container {
+    top: 16px;
+    padding: 0 4%;
+  }
+
+  .sims-navbar {
+    padding: 10px 20px;
+  }
+
+  .sims-logo-svg {
+    height: 32px;
+  }
+
+  .sims-hero {
+    min-height: 85vh;
+    padding: 0 6% 60px;
+  }
+
+  .sims-hero-headline-bottom {
+    font-size: 3.2rem;
+  }
+
+  .pixel-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pixel-split-title {
+    font-size: 2.4rem;
+  }
+
+  .sims-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .capabilities-section {
+    padding: 70px 4%;
+  }
+
+  .split-slider-container {
+    grid-template-columns: 1fr;
+  }
+
+  .split-left-panel {
+    height: 360px;
+  }
+
+  .split-nav-thumbs {
+    top: 360px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .split-right-panel {
+    padding: 60px 6% 50px;
+  }
+
+  .split-slider-section {
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .split-slide-title {
+    font-size: 2.2rem;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .achievements-section {
+    padding: 70px 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .sims-footer {
+    padding: 60px 6% 30px;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .footer-watermark {
+    font-size: 8vw;
+  }
 }
 
 /* 4. MOBILE PHABLETS & LARGE PHONES (577px - 768px) */
 @media (max-width: 768px) {
-  .sims-header-container { top: 10px !important; padding: 0 12px !important; }
-  .sims-navbar { padding: 8px 16px !important; border-radius: 35px !important; max-width: 100% !important; }
-  .sims-logo-svg { height: 28px !important; max-width: 150px !important; }
-  .sims-lang-btn { display: none !important; }
-  .sims-pill-btn { padding: 8px 16px !important; font-size: 0.8rem !important; }
-  .sims-menu-toggle { width: 38px !important; height: 38px !important; font-size: 1.15rem !important; }
-  
-  .sims-drawer-overlay { padding: 30px 6%; }
-  .sims-drawer-grid { grid-template-columns: 1fr; gap: 30px; }
-  .sims-drawer-menu-links a { font-size: 1.8rem; }
-  .sims-drawer-info { padding-left: 0; border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 20px; }
-  
-  .sims-hero { min-height: 80vh; padding: 0 5% 50px; }
-  .sims-hero-headline-bottom { font-size: 2.4rem; line-height: 1.15; }
-  
-  .pixel-split-sec { padding: 60px 5%; }
-  .pixel-split-title { font-size: 2rem; }
-  .pixel-split-text { font-size: 1rem; }
-  
+  .sims-header-container {
+    top: 10px !important;
+    padding: 0 12px !important;
+  }
+
+  .sims-navbar {
+    padding: 8px 16px !important;
+    border-radius: 35px !important;
+    max-width: 100% !important;
+  }
+
+  .sims-logo-svg {
+    height: 28px !important;
+    max-width: 150px !important;
+  }
+
+  .sims-lang-btn {
+    display: none !important;
+  }
+
+  .sims-pill-btn {
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .sims-menu-toggle {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.15rem !important;
+  }
+
+  .sims-drawer-overlay {
+    padding: 30px 6%;
+  }
+
+  .sims-drawer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sims-drawer-menu-links a {
+    font-size: 1.8rem;
+  }
+
+  .sims-drawer-info {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+  }
+
+  .sims-hero {
+    min-height: 80vh;
+    padding: 0 5% 50px;
+  }
+
+  .sims-hero-headline-bottom {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .pixel-split-sec {
+    padding: 60px 5%;
+  }
+
+  .pixel-split-title {
+    font-size: 2rem;
+  }
+
+  .pixel-split-text {
+    font-size: 1rem;
+  }
+
   /* Metrics Grid on Mobile: 1 Column Full Width */
-  .sims-metrics-grid { grid-template-columns: 1fr !important; gap: 18px !important; }
-  .sims-metric-card { width: 100% !important; padding: 28px 20px 22px !important; }
-  
+  .sims-metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .sims-metric-card {
+    width: 100% !important;
+    padding: 28px 20px 22px !important;
+  }
+
   /* Anchors Accordion on Mobile: Vertical Stack */
-  .option3-container { flex-direction: column !important; height: auto !important; gap: 18px !important; }
-  .op3-strip { width: 100% !important; height: auto !important; min-height: 240px !important; flex: none !important; }
-  .op3-strip.expanded { flex: none !important; height: auto !important; min-height: 300px !important; }
-  .op3-strip-img { position: absolute !important; inset: 0 !important; opacity: 0.25 !important; }
-  .op3-strip.expanded .op3-strip-img { opacity: 0.35 !important; }
-  .op3-content-full { position: relative !important; opacity: 1 !important; transform: none !important; padding: 24px 20px !important; background: transparent !important; }
-  
-  .fleet-filter-bar { gap: 8px; margin-bottom: 30px; }
-  .filter-btn { padding: 8px 14px; font-size: 0.8rem; }
-  
-  .bento-grid { grid-template-columns: 1fr; gap: 16px; }
-  .bento-card { min-height: auto; padding: 24px 20px; }
-  .bento-title { font-size: 1.25rem; }
-  
-  .split-left-panel { height: 280px; }
-  .split-nav-thumbs { top: 280px; }
-  .split-thumb-dot { width: 36px; height: 36px; }
-  .split-slide-title { font-size: 1.8rem; }
-  .split-slide-desc { font-size: 0.95rem; }
-  .split-counter-badge { top: 20px; left: 6%; font-size: 0.85rem; }
-  
-  .achievements-grid, .radial-counter-grid { grid-template-columns: 1fr !important; gap: 24px !important; width: 100% !important; }
-  .radial-counter-card { width: 100% !important; padding: 30px 18px !important; }
-  .radial-circle { width: 140px; height: 140px; }
-  .gauge-percentage { font-size: 2rem; }
-  
-  .footer-main-grid { grid-template-columns: 1fr; gap: 32px; }
-  .sims-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  .footer-watermark { font-size: 10vw; letter-spacing: 2px; }
+  .option3-container {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 18px !important;
+  }
+
+  .op3-strip {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 240px !important;
+    flex: none !important;
+  }
+
+  .op3-strip.expanded {
+    flex: none !important;
+    height: auto !important;
+    min-height: 300px !important;
+  }
+
+  .op3-strip-img {
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0.25 !important;
+  }
+
+  .op3-strip.expanded .op3-strip-img {
+    opacity: 0.35 !important;
+  }
+
+  .op3-content-full {
+    position: relative !important;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 24px 20px !important;
+    background: transparent !important;
+  }
+
+  .fleet-filter-bar {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bento-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .bento-title {
+    font-size: 1.25rem;
+  }
+
+  .split-left-panel {
+    height: 280px;
+  }
+
+  .split-nav-thumbs {
+    top: 280px;
+  }
+
+  .split-thumb-dot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .split-slide-title {
+    font-size: 1.8rem;
+  }
+
+  .split-slide-desc {
+    font-size: 0.95rem;
+  }
+
+  .split-counter-badge {
+    top: 20px;
+    left: 6%;
+    font-size: 0.85rem;
+  }
+
+  .achievements-grid,
+  .radial-counter-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  .radial-counter-card {
+    width: 100% !important;
+    padding: 30px 18px !important;
+  }
+
+  .radial-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .gauge-percentage {
+    font-size: 2rem;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .sims-footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-watermark {
+    font-size: 10vw;
+    letter-spacing: 2px;
+  }
 }
 
 /* 5. SMALL MOBILE PHONES (320px - 576px) */
 @media (max-width: 576px) {
-  .sims-header-container { top: 8px !important; padding: 0 8px !important; }
-  .sims-navbar { padding: 6px 12px !important; }
-  .sims-logo-svg { height: 24px !important; max-width: 120px !important; }
-  .sims-pill-btn { display: none !important; }
-  .sims-menu-toggle { width: 34px !important; height: 34px !important; font-size: 1rem !important; }
-  
-  .radial-counter-grid { grid-template-columns: 1fr !important; gap: 18px !important; width: 100% !important; }
-  .radial-counter-card { width: 100% !important; padding: 26px 16px !important; }
-  
-  .sims-hero-headline-bottom { font-size: 1.95rem; }
-  .sims-sec-title { font-size: 1.85rem !important; }
-  .sims-sec-subtitle { font-size: 0.85rem !important; }
-  
-  .pixel-split-title { font-size: 1.7rem; }
-  
-  .filter-btn { padding: 6px 12px; font-size: 0.75rem; }
-  
-  .sims-metric-val { font-size: 2.5rem !important; }
-  .sims-metric-label { font-size: 0.8rem !important; letter-spacing: 1px !important; }
-  
-  .split-right-panel { padding: 45px 5% 35px; }
-  .split-slide-title { font-size: 1.5rem; }
-  .split-slide-btn { padding: 10px 24px; font-size: 0.8rem; }
-  
-  .radial-circle { width: 130px; height: 130px; }
-  .gauge-percentage { font-size: 1.8rem; }
-  .gauge-label { font-size: 0.75rem; }
-  .achievement-title { font-size: 1.1rem; }
-  
-  .footer-compliance-badges { gap: 8px; }
-  .compliance-pill { padding: 4px 10px; font-size: 0.75rem; }
+  .sims-header-container {
+    top: 8px !important;
+    padding: 0 8px !important;
+  }
+
+  .sims-navbar {
+    padding: 6px 12px !important;
+  }
+
+  .sims-logo-svg {
+    height: 24px !important;
+    max-width: 120px !important;
+  }
+
+  .sims-pill-btn {
+    display: none !important;
+  }
+
+  .sims-menu-toggle {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 1rem !important;
+  }
+
+  .radial-counter-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  .radial-counter-card {
+    width: 100% !important;
+    padding: 26px 16px !important;
+  }
+
+  .sims-hero-headline-bottom {
+    font-size: 1.95rem;
+  }
+
+  .sims-sec-title {
+    font-size: 1.85rem !important;
+  }
+
+  .sims-sec-subtitle {
+    font-size: 0.85rem !important;
+  }
+
+  .pixel-split-title {
+    font-size: 1.7rem;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .sims-metric-val {
+    font-size: 2.5rem !important;
+  }
+
+  .sims-metric-label {
+    font-size: 0.8rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .split-right-panel {
+    padding: 45px 5% 35px;
+  }
+
+  .split-slide-title {
+    font-size: 1.5rem;
+  }
+
+  .split-slide-btn {
+    padding: 10px 24px;
+    font-size: 0.8rem;
+  }
+
+  .radial-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .gauge-percentage {
+    font-size: 1.8rem;
+  }
+
+  .gauge-label {
+    font-size: 0.75rem;
+  }
+
+  .achievement-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-compliance-badges {
+    gap: 8px;
+  }
+
+  .compliance-pill {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
 }
-  
+
+/* ==========================================================================
+   PINNED STICKY 3-PHASE SCROLL REVEAL CONTAINER (UNIVERSAL)
+   ========================================================================== */
+.sec-policy-scroll-container {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.sec-policy-split {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sec-policy-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: stretch;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.policy-left-ribbon {
+  background: linear-gradient(180deg, #07162c 0%, #003b96 50%, #0052cc 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+  border-right: 3px solid #ffffff;
+  z-index: 2;
+  opacity: 1;
+  transform: none;
+}
+
+.policy-left-ribbon.pop-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.policy-ribbon-text {
+  font-size: clamp(2.5rem, 4.2vw, 4rem);
+  font-weight: 900;
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  line-height: 1;
+  font-family: inherit;
+}
+
+.policy-right-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  height: 100%;
+}
+
+.policy-top-img-container {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transform: none;
+}
+
+.policy-top-img-container.pop-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.policy-top-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.policy-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 16px 28px 20px 28px;
+  background: #ffffff;
+}
+
+.policy-card {
+  background: linear-gradient(180deg, #07162c 0%, #003790 50%, #0052cc 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(0, 55, 144, 0.3);
+  opacity: 1;
+  transform: none;
+}
+
+.policy-card.pop-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.policy-card:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(180deg, #003b96 0%, #0052cc 100%) !important;
+  border-color: #ffffff;
+  box-shadow: 0 16px 35px rgba(0, 82, 204, 0.35);
+}
+
+.policy-icon-wrap {
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.policy-card:hover .policy-icon-wrap {
+  background: #38bdf8;
+  color: #07162c;
+  border-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+.policy-card:hover .policy-icon-wrap i,
+.policy-card:hover .policy-icon-wrap svg {
+  color: #07162c;
+  animation: innerIconWave 0.6s ease-in-out infinite alternate;
+}
+
+.policy-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.policy-card-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88) !important;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@keyframes innerIconWave {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(15deg) scale(1.18);
+  }
+}

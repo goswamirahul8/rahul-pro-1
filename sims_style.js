@@ -84,4 +84,46 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 3-Line Hamburger Overlay Drawer Menu Toggle (Universal)
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeDrawer = document.getElementById('close-drawer');
+  const drawerMenu = document.getElementById('drawer-menu');
+  const drawerLinks = document.querySelectorAll('.drawer-link');
+
+  if (menuToggle && drawerMenu) {
+    menuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      drawerMenu.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+  }
+
+  if (closeDrawer && drawerMenu) {
+    closeDrawer.addEventListener('click', (e) => {
+      e.preventDefault();
+      drawerMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (drawerLinks && drawerMenu) {
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawerMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Close drawer if clicking outside the content area
+  if (drawerMenu) {
+    drawerMenu.addEventListener('click', (e) => {
+      if (e.target === drawerMenu) {
+        drawerMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
 });
